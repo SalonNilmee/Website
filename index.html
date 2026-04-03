@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salon Nilmee | Luxury Beauty Gampaha</title>
+    <title>Salon Nilmee | 15+ Years of Luxury Beauty</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -27,141 +28,198 @@
         }
     </script>
     <style>
-        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
         .reveal.visible { opacity: 1; transform: translateY(0); }
+        .glass-nav { background: rgba(46, 26, 26, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(201, 169, 110, 0.2); }
         .star-active { color: #c9a96e !important; }
-        #loader.hidden { opacity: 0; pointer-events: none; }
     </style>
 </head>
 <body class="bg-cream font-sans text-espresso overflow-x-hidden">
 
-    <div id="loader" class="fixed inset-0 z-[9999] bg-espresso flex items-center justify-center transition-opacity duration-700">
-        <div class="font-serif text-4xl tracking-[0.3em] text-gold animate-pulse">NILMEE</div>
+    <div id="loader" class="fixed inset-0 z-[100] bg-espresso flex items-center justify-center transition-opacity duration-1000">
+        <div class="font-serif text-3xl tracking-[0.4em] text-gold animate-pulse">SALON NILMEE</div>
     </div>
 
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 px-6 py-6 lg:px-20">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 px-6 py-5 lg:px-20">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="#" class="font-serif text-2xl font-semibold tracking-wider text-warmWhite group">
-                ✦ Salon <span class="group-hover:text-gold transition-colors">Nilmee</span>
-            </a>
+            <a href="#" class="font-serif text-2xl tracking-wider text-warmWhite">✦ Salon <span class="text-gold">Nilmee</span></a>
             <div class="hidden md:flex gap-10">
-                <a href="#about" class="text-xs font-semibold uppercase tracking-widest text-warmWhite hover:text-gold transition-colors">About</a>
-                <a href="#services" class="text-xs font-semibold uppercase tracking-widest text-warmWhite hover:text-gold transition-colors">Services</a>
-                <a href="#testimonials" class="text-xs font-semibold uppercase tracking-widest text-warmWhite hover:text-gold transition-colors">Reviews</a>
-                <a href="#contact" class="text-xs font-semibold uppercase tracking-widest text-warmWhite hover:text-gold transition-colors">Contact</a>
+                <a href="#about" class="text-[10px] font-bold uppercase tracking-widest text-warmWhite/80 hover:text-gold transition-colors">About</a>
+                <a href="#services" class="text-[10px] font-bold uppercase tracking-widest text-warmWhite/80 hover:text-gold transition-colors">Services</a>
+                <a href="#testimonials" class="text-[10px] font-bold uppercase tracking-widest text-warmWhite/80 hover:text-gold transition-colors">Reviews</a>
+                <a href="#contact" class="text-[10px] font-bold uppercase tracking-widest text-warmWhite/80 hover:text-gold transition-colors">Contact</a>
             </div>
-            <a href="tel:+94774570509" class="bg-gold text-espresso px-6 py-2 text-xs font-bold uppercase tracking-tighter hover:bg-rose transition-all">Book Now</a>
+            <a href="https://wa.me/94774570509?text=Hello%20Salon%20Nilmee!%20I%20want%20to%20book%20an%20appointment." class="bg-gold text-espresso px-7 py-2.5 text-[10px] font-bold uppercase tracking-widest hover:bg-rose hover:text-warmWhite transition-all duration-300">Book Now</a>
         </div>
     </nav>
 
-    <section class="relative h-screen flex items-center bg-espresso overflow-hidden px-6 lg:px-20">
-        <div class="absolute inset-0 opacity-20 pointer-events-none">
-            <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,#c9896a_0%,transparent_50%)]"></div>
+    <section class="relative h-screen flex items-center bg-espresso px-6 lg:px-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1920" class="w-full h-full object-cover" alt="Salon Background">
         </div>
         <div class="relative z-10 max-w-4xl">
-            <p class="text-gold text-xs font-semibold tracking-[0.4em] uppercase mb-6">✦ Est. in Gampaha ✦</p>
-            <h1 class="font-serif text-6xl lg:text-9xl text-warmWhite leading-none mb-8">
-                Beauty <br> <span class="italic font-light text-gold">Reimagined</span>
+            <p class="text-gold text-xs font-semibold tracking-[0.5em] uppercase mb-6 animate__animated animate__fadeIn">✦ 15+ Years of Excellence ✦</p>
+            <h1 class="font-serif text-6xl lg:text-9xl text-warmWhite leading-tight mb-8">
+                Timeless <br> <span class="italic font-light text-gold italic">Artistry.</span>
             </h1>
-            <p class="text-warmWhite/70 text-lg max-w-md mb-10 font-light leading-relaxed">
-                Experience transformative beauty care crafted to reveal the best version of you in the heart of Gampaha.
+            <p class="text-warmWhite/80 text-lg max-w-md mb-10 font-light leading-relaxed">
+                Step into Gampaha's premier destination for luxury beauty. Crafting confidence and elegance since 2011.
             </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="#services" class="bg-gold text-espresso px-10 py-4 font-bold uppercase tracking-widest text-xs hover:bg-rose transition-all">Explore Services</a>
-                <a href="#contact" class="border border-warmWhite/30 text-warmWhite px-10 py-4 font-bold uppercase tracking-widest text-xs hover:border-gold hover:text-gold transition-all">Get in Touch</a>
+            <div class="flex flex-wrap gap-5">
+                <a href="#services" class="bg-gold text-espresso px-10 py-4 font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform">Our Menu</a>
+                <a href="tel:+94774570509" class="border border-warmWhite/40 text-warmWhite px-10 py-4 font-bold uppercase tracking-widest text-xs hover:bg-warmWhite hover:text-espresso transition-all">Call Studio</a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-24 bg-warmWhite px-6 lg:px-20">
+    <section id="about" class="py-32 bg-warmWhite px-6 lg:px-20">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
             <div class="relative reveal">
-                <div class="aspect-[3/4] bg-gradient-to-br from-rose to-espresso flex items-center justify-center text-warmWhite/20 text-9xl font-serif">✦</div>
-                <div class="absolute -bottom-6 -right-6 bg-gold p-8 text-center shadow-xl">
-                    <div class="font-serif text-4xl text-espresso">10+</div>
-                    <div class="text-[10px] font-bold uppercase tracking-widest text-espresso/60">Years Excellence</div>
+                <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=800" class="w-full grayscale hover:grayscale-0 transition duration-700 shadow-2xl" alt="About Salon">
+                <div class="absolute -bottom-10 -right-10 bg-espresso p-12 text-center border-t-4 border-gold">
+                    <div class="font-serif text-5xl text-gold">15+</div>
+                    <div class="text-[10px] font-bold uppercase tracking-widest text-warmWhite/50 mt-2">Years of Mastery</div>
                 </div>
             </div>
             <div class="reveal">
-                <p class="text-rose text-xs font-bold tracking-[0.3em] uppercase mb-4">Our Story</p>
-                <h2 class="font-serif text-4xl lg:text-6xl mb-8">Where Every Visit is a <span class="italic text-rose">Luxury</span></h2>
-                <div class="w-12 h-[1px] bg-gold mb-8"></div>
-                <p class="text-espresso/70 leading-relaxed mb-6 font-light">Salon Nilmee was born from a deep passion for beauty. Nestled in Gampaha, we have become the destination for those who appreciate genuine craftsmanship and personalized care.</p>
-                
-                <div class="grid grid-cols-2 gap-4 mt-10">
-                    <div class="p-4 border border-gold/20 bg-cream flex gap-3 items-center">
-                        <span class="text-xl">🌿</span>
-                        <span class="text-[11px] font-bold uppercase tracking-wider">Premium Products</span>
+                <p class="text-rose text-xs font-bold tracking-[0.4em] uppercase mb-4">Our Story</p>
+                <h2 class="font-serif text-5xl lg:text-6xl mb-8">Crafting Beauty with <em>Passion</em></h2>
+                <div class="w-16 h-[1px] bg-gold mb-10"></div>
+                <p class="text-espresso/70 leading-relaxed mb-8 font-light text-lg">Salon Nilmee, led by Mrs. Nilmini Thennakoon, is Gampaha's sanctuary for those who value detail and professional grade artistry.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex items-center gap-4 p-5 bg-cream border border-gold/10">
+                        <span class="text-2xl">✨</span>
+                        <span class="text-xs font-bold uppercase tracking-widest">Expert Stylists</span>
                     </div>
-                    <div class="p-4 border border-gold/20 bg-cream flex gap-3 items-center">
-                        <span class="text-xl">✨</span>
-                        <span class="text-[11px] font-bold uppercase tracking-wider">Expert Team</span>
+                    <div class="flex items-center gap-4 p-5 bg-cream border border-gold/10">
+                        <span class="text-2xl">🌿</span>
+                        <span class="text-xs font-bold uppercase tracking-widest">Premium Brands</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="testimonials" class="py-24 bg-cream px-6 lg:px-20">
+    <section id="services" class="py-32 bg-espresso text-warmWhite px-6 lg:px-20">
+        <div class="text-center mb-20">
+            <p class="text-gold text-xs font-bold tracking-[0.5em] uppercase mb-4">The Collection</p>
+            <h2 class="font-serif text-5xl lg:text-6xl">Signature Services</h2>
+            <div class="w-20 h-[1px] bg-gold mx-auto mt-8"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="group relative overflow-hidden bg-white/5 border border-white/10 p-8 reveal">
+                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=600" class="w-full h-48 object-cover mb-6 opacity-80 group-hover:opacity-100 transition duration-500" alt="Hair">
+                <h3 class="font-serif text-2xl text-gold mb-4">Hair Artistry</h3>
+                <ul class="text-xs space-y-3 font-light text-warmWhite/60 italic">
+                    <li>✦ Designer Cuts & Styling</li>
+                    <li>✦ Advanced Color & Highlights</li>
+                    <li>✦ Keratin & Straightening</li>
+                </ul>
+            </div>
+            <div class="group relative overflow-hidden bg-white/5 border border-white/10 p-8 reveal">
+                <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?auto=format&fit=crop&q=80&w=600" class="w-full h-48 object-cover mb-6 opacity-80" alt="Skin">
+                <h3 class="font-serif text-2xl text-gold mb-4">Skin & Facial</h3>
+                <ul class="text-xs space-y-3 font-light text-warmWhite/60 italic">
+                    <li>✦ Deep Cleansing Rituals</li>
+                    <li>✦ Whitening & Brightening</li>
+                    <li>✦ Acne & Anti-Ageing Care</li>
+                </ul>
+            </div>
+            <div class="group relative overflow-hidden bg-white/5 border border-white/10 p-8 reveal">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=600" class="w-full h-48 object-cover mb-6 opacity-80" alt="Makeup">
+                <h3 class="font-serif text-2xl text-gold mb-4">Makeup Artistry</h3>
+                <ul class="text-xs space-y-3 font-light text-warmWhite/60 italic">
+                    <li>✦ High-Definition Events</li>
+                    <li>✦ Party & Night Looks</li>
+                    <li>✦ Photography Ready</li>
+                </ul>
+            </div>
+            <div class="group relative overflow-hidden bg-white/5 border border-white/10 p-8 reveal">
+                <img src="https://images.unsplash.com/photo-1594462285124-5f3c02e42ce7?auto=format&fit=crop&q=80&w=600" class="w-full h-48 object-cover mb-6 opacity-80" alt="Bridal">
+                <h3 class="font-serif text-2xl text-gold mb-4">Bridal Luxury</h3>
+                <ul class="text-xs space-y-3 font-light text-warmWhite/60 italic">
+                    <li>✦ Complete Wedding Packages</li>
+                    <li>✦ Pre-Bridal Radiance</li>
+                    <li>✦ Accessories & Draping</li>
+                </ul>
+            </div>
+            <div class="group relative overflow-hidden bg-white/5 border border-white/10 p-8 reveal">
+                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=600" class="w-full h-48 object-cover mb-6 opacity-80" alt="Nails">
+                <h3 class="font-serif text-2xl text-gold mb-4">Nail Studio</h3>
+                <ul class="text-xs space-y-3 font-light text-warmWhite/60 italic">
+                    <li>✦ Gel & Acrylic Extensions</li>
+                    <li>✦ Designer Nail Art</li>
+                    <li>✦ Luxe Pedicures</li>
+                </ul>
+            </div>
+            <div class="group relative overflow-hidden bg-white/5 border border-white/10 p-8 reveal">
+                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=600" class="w-full h-48 object-cover mb-6 opacity-80" alt="Spa">
+                <h3 class="font-serif text-2xl text-gold mb-4">Spa & Wellness</h3>
+                <ul class="text-xs space-y-3 font-light text-warmWhite/60 italic">
+                    <li>✦ Full Body Aromatherapy</li>
+                    <li>✦ Scalp & Head Rituals</li>
+                    <li>✦ Steam & Detox</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-32 bg-cream px-6 lg:px-20">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <p class="text-rose text-xs font-bold tracking-[0.3em] uppercase mb-4">Client Love</p>
-                <h2 class="font-serif text-4xl lg:text-6xl">What Our <span class="italic text-rose">Clients</span> Say</h2>
+                <p class="text-rose text-xs font-bold tracking-[0.4em] uppercase mb-4">The Experience</p>
+                <h2 class="font-serif text-5xl">Client Stories</h2>
             </div>
-
-            <div id="reviews-container" class="grid md:grid-cols-3 gap-8 mb-20">
-                <div class="col-span-full text-center text-gold italic py-10">Loading guest experiences...</div>
-            </div>
-
-            <div class="max-w-xl mx-auto bg-warmWhite p-10 shadow-2xl reveal">
-                <h3 class="font-serif text-3xl text-center mb-8 text-espresso">Share Your Experience</h3>
-                
-                <div id="starInputGroup" class="flex justify-center gap-3 mb-8 text-2xl text-gray-300">
-                    <i class="fas fa-star cursor-pointer transition-colors" data-rating="1"></i>
-                    <i class="fas fa-star cursor-pointer transition-colors" data-rating="2"></i>
-                    <i class="fas fa-star cursor-pointer transition-colors" data-rating="3"></i>
-                    <i class="fas fa-star cursor-pointer transition-colors" data-rating="4"></i>
-                    <i class="fas fa-star cursor-pointer transition-colors" data-rating="5"></i>
+            <div id="reviews-container" class="grid md:grid-cols-3 gap-10 mb-20">
                 </div>
-
+            
+            <div class="max-w-xl mx-auto bg-warmWhite p-12 shadow-xl border border-gold/10 reveal">
+                <h3 class="font-serif text-3xl text-center mb-10">Leave a Review</h3>
+                <div id="starInputGroup" class="flex justify-center gap-4 text-2xl text-gray-300 mb-10">
+                    <i class="fas fa-star cursor-pointer" data-rating="1"></i>
+                    <i class="fas fa-star cursor-pointer" data-rating="2"></i>
+                    <i class="fas fa-star cursor-pointer" data-rating="3"></i>
+                    <i class="fas fa-star cursor-pointer" data-rating="4"></i>
+                    <i class="fas fa-star cursor-pointer" data-rating="5"></i>
+                </div>
                 <form id="liveReviewForm" class="space-y-6">
-                    <input type="text" id="revName" placeholder="Your Name" class="w-full bg-transparent border-b border-gold/30 py-3 outline-none focus:border-gold transition-colors" required>
-                    <textarea id="revComment" placeholder="How was your visit?" class="w-full h-32 bg-espresso/5 p-4 border border-gold/20 rounded-lg outline-none focus:border-gold transition-colors" required></textarea>
-                    <button type="submit" id="submitReviewBtn" class="w-full bg-espresso text-gold py-4 font-bold uppercase tracking-widest text-xs hover:bg-gold hover:text-espresso transition-all">Submit Review</button>
+                    <input type="text" id="revName" placeholder="Name" class="w-full bg-transparent border-b border-gold/30 py-4 outline-none focus:border-gold transition-colors">
+                    <textarea id="revComment" placeholder="Message" class="w-full h-32 bg-espresso/5 p-5 border border-gold/10 outline-none focus:border-gold rounded-lg"></textarea>
+                    <button type="submit" id="submitReviewBtn" class="w-full bg-espresso text-gold py-5 font-bold uppercase tracking-widest text-[10px] hover:bg-gold hover:text-espresso transition-all duration-300">Submit Post</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="bg-espresso pt-20 pb-10 px-6 lg:px-20 text-warmWhite">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16 border-b border-warmWhite/10 pb-16">
+    <footer id="contact" class="bg-espresso text-warmWhite pt-32 pb-10 px-6 lg:px-20">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-20 border-b border-white/5 pb-20">
             <div>
-                <div class="font-serif text-3xl text-gold mb-6">✦ Salon Nilmee</div>
-                <p class="text-sm text-warmWhite/50 italic mb-8">Your beauty, our passion — since day one.</p>
-                <div class="space-y-4 text-sm text-warmWhite/70">
-                    <p>📍 NO:09, Sanasa Ideal, Gampaha</p>
-                    <p>📞 +94 77 45 70 509</p>
-                    <p>📧 salonnilmi@gmail.com</p>
+                <div class="font-serif text-3xl text-gold mb-8">✦ Salon Nilmee</div>
+                <p class="text-sm font-light text-warmWhite/40 leading-relaxed mb-8">Where elegance is meticulously crafted. Sri Lanka's destination for professional beauty care.</p>
+                <div class="flex gap-5 text-xl">
+                    <a href="#" class="text-warmWhite/50 hover:text-gold"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-warmWhite/50 hover:text-gold"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/94774570509" class="text-warmWhite/50 hover:text-gold"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div>
-                <h4 class="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-8">Opening Hours</h4>
-                <div class="space-y-3 text-sm text-warmWhite/60">
-                    <div class="flex justify-between border-b border-warmWhite/5 pb-2"><span>Mon - Fri</span><span class="text-gold">8AM - 8PM</span></div>
-                    <div class="flex justify-between border-b border-warmWhite/5 pb-2"><span>Sat</span><span class="text-gold">8AM - 9PM</span></div>
-                    <div class="flex justify-between"><span>Sun</span><span class="text-gold">9AM - 6PM</span></div>
+                <h4 class="text-gold text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Opening Hours</h4>
+                <div class="space-y-4 text-xs font-light tracking-widest">
+                    <div class="flex justify-between border-b border-white/5 pb-3"><span>Mon – Sun</span> <span class="text-gold">08:00 AM – 07:00 PM</span></div>
+                    <p class="text-warmWhite/30 text-[9px] mt-2 italic">*Open every day for your convenience.</p>
                 </div>
             </div>
             <div>
-                <h4 class="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-8">Follow Our Journey</h4>
-                <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 border border-warmWhite/20 rounded-full flex items-center justify-center hover:border-gold hover:text-gold transition-all"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="w-10 h-10 border border-warmWhite/20 rounded-full flex items-center justify-center hover:border-gold hover:text-gold transition-all"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/94774570509" class="w-10 h-10 border border-warmWhite/20 rounded-full flex items-center justify-center hover:border-gold hover:text-gold transition-all"><i class="fab fa-whatsapp"></i></a>
+                <h4 class="text-gold text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Location</h4>
+                <div class="space-y-5 text-sm font-light">
+                    <p class="text-warmWhite/60">NO:09, Sanasa Ideal, <br> Gampaha, Sri Lanka</p>
+                    <a href="tel:+94774570509" class="block text-gold">+94 77 45 70 509</a>
+                    <a href="https://wa.me/94774570509" class="inline-block bg-green-600 px-5 py-2 rounded-full text-xs font-bold mt-4"><i class="fab fa-whatsapp mr-2"></i> Chat with Us</a>
                 </div>
             </div>
         </div>
-        <p class="text-center text-[10px] text-warmWhite/30 uppercase tracking-widest mt-10">© 2026 Salon Nilmee · Gampaha · Designed for Excellence</p>
+        <p class="text-center text-[9px] uppercase tracking-[0.5em] text-white/20 mt-10">© 2026 Salon Nilmee · Crafting Confidence · Gampaha</p>
     </footer>
 
     <script>
@@ -169,64 +227,58 @@
 
         // Loader
         window.addEventListener('load', () => {
-            setTimeout(() => { document.getElementById('loader').classList.add('hidden'); }, 1000);
+            setTimeout(() => { document.getElementById('loader').classList.add('opacity-0'); setTimeout(() => document.getElementById('loader').style.display = 'none', 1000); }, 1000);
         });
 
-        // Navbar Scroll Effect
+        // Navbar Animation
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                nav.classList.add('bg-espresso/95', 'py-4', 'shadow-2xl');
-                nav.classList.remove('py-6');
+            if (window.scrollY > 80) {
+                nav.classList.add('glass-nav', 'py-3');
+                nav.classList.remove('py-5');
             } else {
-                nav.classList.remove('bg-espresso/95', 'py-4', 'shadow-2xl');
-                nav.classList.add('py-6');
+                nav.classList.remove('glass-nav', 'py-3');
+                nav.classList.add('py-5');
             }
         });
 
-        // Reveal Animation
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        // Reveal Settings
+        const reveal = { distance: '40px', duration: 1000, easing: 'cubic-bezier(0.5, 0, 0, 1)', interval: 200, origin: 'bottom' };
+        ScrollReveal().reveal('.reveal', reveal);
 
-        // Review Logic
+        // Reviews Logic
         let selectedRating = 0;
         const stars = document.querySelectorAll('#starInputGroup i');
-        stars.forEach(star => {
-            star.addEventListener('click', () => {
-                selectedRating = star.getAttribute('data-rating');
-                stars.forEach(s => s.classList.toggle('star-active', s.getAttribute('data-rating') <= selectedRating));
+        stars.forEach(s => {
+            s.addEventListener('click', () => {
+                selectedRating = s.getAttribute('data-rating');
+                stars.forEach(star => star.classList.toggle('star-active', star.getAttribute('data-rating') <= selectedRating));
             });
         });
 
         async function fetchReviews() {
             const container = document.getElementById('reviews-container');
             try {
-                const response = await fetch(API_URL);
-                const data = await response.json();
-                if (!data.length) { container.innerHTML = "<p class='col-span-full text-center opacity-50'>No reviews yet.</p>"; return; }
-
-                container.innerHTML = data.reverse().slice(0, 3).map(rev => `
-                    <div class="bg-warmWhite p-8 border border-gold/10 shadow-lg reveal visible">
-                        <div class="text-gold mb-4 text-xs">${'★'.repeat(rev.rating)}</div>
-                        <p class="italic text-espresso/70 text-sm mb-6">"${rev.comment}"</p>
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 bg-gold rounded-full flex items-center justify-center text-espresso text-[10px] font-bold">${rev.name.charAt(0)}</div>
-                            <span class="text-[10px] font-bold uppercase tracking-widest">${rev.name}</span>
-                        </div>
+                const res = await fetch(API_URL);
+                const data = await res.json();
+                if(!data.length) { container.innerHTML = "<p class='col-span-3 text-center opacity-30'>Our luxury journey is just beginning...</p>"; return; }
+                
+                container.innerHTML = data.reverse().slice(0,3).map(r => `
+                    <div class="bg-white p-10 shadow-sm border border-gold/5 reveal">
+                        <div class="text-gold mb-6 text-[10px] tracking-widest">${'★'.repeat(r.rating)}</div>
+                        <p class="text-espresso/70 italic text-sm leading-relaxed mb-8">"${r.comment}"</p>
+                        <div class="font-bold text-[9px] uppercase tracking-[0.3em] text-rose">— ${r.name}</div>
                     </div>
                 `).join('');
-            } catch (e) { container.innerHTML = "<p class='text-red-500'>Error loading reviews.</p>"; }
+                ScrollReveal().reveal('.reveal', reveal);
+            } catch (e) { container.innerHTML = "<p class='text-center text-red-300'>Unable to connect to sheet.</p>"; }
         }
 
         document.getElementById('liveReviewForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            if (!selectedRating) { alert("Please select a star rating!"); return; }
+            if(!selectedRating) return alert("Select a star rating!");
             const btn = document.getElementById('submitReviewBtn');
-            btn.innerText = "Submitting..."; btn.disabled = true;
+            btn.innerText = "Processing..."; btn.disabled = true;
 
             try {
                 await fetch(API_URL, {
@@ -241,9 +293,9 @@
                         }]
                     })
                 });
-                alert("Thank you! Review posted.");
+                alert("Thank you for your feedback!");
                 location.reload();
-            } catch (err) { alert("Error connecting to sheet."); }
+            } catch (err) { alert("Submission failed."); btn.disabled = false; }
         });
 
         fetchReviews();
