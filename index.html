@@ -1,240 +1,252 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Salon Nilmee – Premium beauty & grooming salon in Gampaha. Hair, skin, bridal, nails and more."/>
-  <title>Salon Nilmee | Gampaha</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>"/>
-  <style>
-    /* Styling for the new Star Rating & Form */
-    .star-rating { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; }
-    .star-rating i { cursor: pointer; font-size: 1.8rem; color: #d1d5db; transition: color 0.3s; }
-    .star-rating i.active { color: var(--gold, #c9a96e); }
-    .review-form-container { 
-        max-width: 600px; margin: 4rem auto 0; padding: 2.5rem; 
-        background: rgba(201,169,110,0.05); border: 1px solid rgba(201,169,110,0.15); border-radius: 20px; 
-    }
-    .rev-input { 
-        width: 100%; background: transparent; border: none; border-bottom: 1px solid rgba(201,169,110,0.3); 
-        padding: 12px 0; margin-bottom: 20px; color: var(--warm-white); outline: none; font-family: 'Jost', sans-serif;
-    }
-    .rev-input:focus { border-color: var(--gold); }
-    .rev-textarea { 
-        width: 100%; height: 100px; background: rgba(255,255,255,0.03); border: 1px solid rgba(201,169,110,0.2); 
-        border-radius: 10px; padding: 15px; color: var(--warm-white); outline: none; margin-bottom: 20px; resize: none;
-    }
-    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-  </style>
-</head>
-<body>
-
-  <div id="loader">
-    <div class="loader-text">NILMEE</div>
-  </div>
-
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursor-follower"></div>
-
-  <nav id="navbar">
-    <a href="#hero" class="nav-logo">✦ Salon Nilmee</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="#testimonials">Reviews</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </div>
-  </nav>
-
-  <div id="mobileMenu" style="display:none; position:fixed; inset:0; background:var(--espresso); z-index:400; flex-direction:column; align-items:center; justify-content:center; gap:2.5rem;">
-    <a href="#hero" onclick="closeMenu()" style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:var(--gold); text-decoration:none;">Home</a>
-    <a href="#about" onclick="closeMenu()" style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:var(--warm-white); text-decoration:none;">About</a>
-    <a href="#services" onclick="closeMenu()" style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:var(--warm-white); text-decoration:none;">Services</a>
-    <a href="#team" onclick="closeMenu()" style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:var(--warm-white); text-decoration:none;">Team</a>
-    <a href="#testimonials" onclick="closeMenu()" style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:var(--warm-white); text-decoration:none;">Reviews</a>
-    <a href="#contact" onclick="closeMenu()" style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:var(--warm-white); text-decoration:none;">Contact</a>
-  </div>
-
-  <section class="hero" id="hero">
-    <div class="hero-bg-pattern"></div>
-    <div class="hero-lines"></div>
-    <div class="hero-content">
-      <p class="hero-eyebrow">✦ Est. in Gampaha ✦</p>
-      <h1 class="hero-title">Beauty <em>Reimagined</em></h1>
-      <p class="hero-sub">Where artistry meets elegance. Experience transformative beauty care crafted to reveal the best version of you.</p>
-      <div class="hero-actions">
-        <a href="#services" class="btn-primary"><span>Explore Services</span></a>
-        <a href="#contact" class="btn-outline">Book Appointment</a>
-      </div>
-    </div>
-    <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
-  </section>
-
-  <section class="testimonials" id="testimonials">
-    <div style="text-align:center;">
-      <p class="section-label reveal">Client Love</p>
-      <h2 class="section-title reveal">What Our <em>Clients</em> Say</h2>
-      <div class="divider reveal" style="margin:1.5rem auto;"></div>
-    </div>
-
-    <div id="reviews-container" class="testimonials-grid">
-      <p style="text-align:center; color:var(--gold); width:100%;">Loading our guests' experiences...</p>
-    </div>
-
-    <div class="review-form-container reveal">
-      <h3 style="font-family:'Cormorant Garamond', serif; font-size:1.8rem; text-align:center; margin-bottom:1.5rem; color:var(--gold);">Share Your Experience</h3>
-      
-      <div class="star-rating" id="starInputGroup">
-        <i class="fas fa-star" data-rating="1"></i>
-        <i class="fas fa-star" data-rating="2"></i>
-        <i class="fas fa-star" data-rating="3"></i>
-        <i class="fas fa-star" data-rating="4"></i>
-        <i class="fas fa-star" data-rating="5"></i>
-      </div>
-
-      <form id="liveReviewForm">
-        <input type="text" id="revName" placeholder="Your Name" class="rev-input" required>
-        <textarea id="revComment" placeholder="How was your visit to Salon Nilmee?" class="rev-textarea" required></textarea>
-        <div style="text-align:center;">
-            <button type="submit" id="submitReviewBtn" class="btn-primary" style="border:none; cursor:pointer;">
-                <span>Submit Review</span>
-            </button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <script>
-    // ── Configuration ──
-    const API_URL = "https://sheetdb.io/api/v1/o2mya7ffwxdp5";
-
-    // ── Loader ──
-    window.addEventListener('load', () => {
-      setTimeout(() => { document.getElementById('loader').classList.add('hidden'); }, 1200);
-    });
-
-    // ── Custom Cursor Logic (Existing) ──
-    const cursor = document.getElementById('cursor');
-    const follower = document.getElementById('cursor-follower');
-    let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0;
-    document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; cursor.style.left = mouseX + 'px'; cursor.style.top = mouseY + 'px'; });
-    (function animateFollower() { followerX += (mouseX - followerX) * 0.12; followerY += (mouseY - followerY) *.12; follower.style.left = followerX + 'px'; follower.style.top = followerY + 'px'; requestAnimationFrame(animateFollower); })();
-
-    // ── LIVE REVIEWS LOGIC ──
-
-    // 1. Star Interaction
-    let selectedRating = 0;
-    const stars = document.querySelectorAll('#starInputGroup i');
-    stars.forEach(star => {
-        star.addEventListener('click', () => {
-            selectedRating = star.getAttribute('data-rating');
-            stars.forEach(s => {
-                s.classList.toggle('active', s.getAttribute('data-rating') <= selectedRating);
-            });
-        });
-    });
-
-    // 2. Fetch Reviews from Google Sheet
-    async function fetchLiveReviews() {
-        const container = document.getElementById('reviews-container');
-        try {
-            const response = await fetch(API_URL);
-            const data = await response.json();
-            
-            if (!data || data.length === 0) {
-                container.innerHTML = "<p style='text-align:center; opacity:0.5;'>No reviews yet. Be the first to share!</p>";
-                return;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Nilmee | Luxury Beauty Gampaha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        espresso: '#2e1a1a',
+                        gold: '#c9a96e',
+                        rose: '#c9896a',
+                        cream: '#fdf8f2',
+                        warmWhite: '#fefcf9',
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Jost', 'sans-serif'],
+                    }
+                }
             }
+        }
+    </script>
+    <style>
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .star-active { color: #c9a96e !important; }
+        #loader.hidden { opacity: 0; pointer-events: none; }
+    </style>
+</head>
+<body class="bg-cream font-sans text-espresso overflow-x-hidden">
 
-            // Display last 3 reviews
-            const recentReviews = data.reverse().slice(0, 3);
-            
-            container.innerHTML = recentReviews.map(rev => `
-                <div class="testimonial-card reveal visible">
-                    <div class="stars" style="color:var(--gold); margin-bottom:1rem;">
-                        ${'★'.repeat(parseInt(rev.rating) || 5)}${'☆'.repeat(5 - (parseInt(rev.rating) || 5))}
+    <div id="loader" class="fixed inset-0 z-[9999] bg-espresso flex items-center justify-center transition-opacity duration-700">
+        <div class="font-serif text-4xl tracking-[0.3em] text-gold animate-pulse">NILMEE</div>
+    </div>
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 px-6 py-6 lg:px-20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="font-serif text-2xl font-semibold tracking-wider text-warmWhite group">
+                ✦ Salon <span class="group-hover:text-gold transition-colors">Nilmee</span>
+            </a>
+            <div class="hidden md:flex gap-10">
+                <a href="#about" class="text-xs font-semibold uppercase tracking-widest text-warmWhite hover:text-gold transition-colors">About</a>
+                <a href="#services" class="text-xs font-semibold uppercase tracking-widest text-warmWhite hover:text-gold transition-colors">Services</a>
+                <a href="#testimonials" class="text-xs font-semibold uppercase tracking-widest text-warmWhite hover:text-gold transition-colors">Reviews</a>
+                <a href="#contact" class="text-xs font-semibold uppercase tracking-widest text-warmWhite hover:text-gold transition-colors">Contact</a>
+            </div>
+            <a href="tel:+94774570509" class="bg-gold text-espresso px-6 py-2 text-xs font-bold uppercase tracking-tighter hover:bg-rose transition-all">Book Now</a>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex items-center bg-espresso overflow-hidden px-6 lg:px-20">
+        <div class="absolute inset-0 opacity-20 pointer-events-none">
+            <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,#c9896a_0%,transparent_50%)]"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl">
+            <p class="text-gold text-xs font-semibold tracking-[0.4em] uppercase mb-6">✦ Est. in Gampaha ✦</p>
+            <h1 class="font-serif text-6xl lg:text-9xl text-warmWhite leading-none mb-8">
+                Beauty <br> <span class="italic font-light text-gold">Reimagined</span>
+            </h1>
+            <p class="text-warmWhite/70 text-lg max-w-md mb-10 font-light leading-relaxed">
+                Experience transformative beauty care crafted to reveal the best version of you in the heart of Gampaha.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#services" class="bg-gold text-espresso px-10 py-4 font-bold uppercase tracking-widest text-xs hover:bg-rose transition-all">Explore Services</a>
+                <a href="#contact" class="border border-warmWhite/30 text-warmWhite px-10 py-4 font-bold uppercase tracking-widest text-xs hover:border-gold hover:text-gold transition-all">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-warmWhite px-6 lg:px-20">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div class="relative reveal">
+                <div class="aspect-[3/4] bg-gradient-to-br from-rose to-espresso flex items-center justify-center text-warmWhite/20 text-9xl font-serif">✦</div>
+                <div class="absolute -bottom-6 -right-6 bg-gold p-8 text-center shadow-xl">
+                    <div class="font-serif text-4xl text-espresso">10+</div>
+                    <div class="text-[10px] font-bold uppercase tracking-widest text-espresso/60">Years Excellence</div>
+                </div>
+            </div>
+            <div class="reveal">
+                <p class="text-rose text-xs font-bold tracking-[0.3em] uppercase mb-4">Our Story</p>
+                <h2 class="font-serif text-4xl lg:text-6xl mb-8">Where Every Visit is a <span class="italic text-rose">Luxury</span></h2>
+                <div class="w-12 h-[1px] bg-gold mb-8"></div>
+                <p class="text-espresso/70 leading-relaxed mb-6 font-light">Salon Nilmee was born from a deep passion for beauty. Nestled in Gampaha, we have become the destination for those who appreciate genuine craftsmanship and personalized care.</p>
+                
+                <div class="grid grid-cols-2 gap-4 mt-10">
+                    <div class="p-4 border border-gold/20 bg-cream flex gap-3 items-center">
+                        <span class="text-xl">🌿</span>
+                        <span class="text-[11px] font-bold uppercase tracking-wider">Premium Products</span>
                     </div>
-                    <p class="testimonial-text">"${rev.comment}"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar" style="background:var(--gold); color:var(--espresso);">${rev.name.charAt(0).toUpperCase()}</div>
-                        <div>
-                            <div class="author-name">${rev.name}</div>
-                            <div class="author-since">${rev.date || 'Verified Client'}</div>
-                        </div>
+                    <div class="p-4 border border-gold/20 bg-cream flex gap-3 items-center">
+                        <span class="text-xl">✨</span>
+                        <span class="text-[11px] font-bold uppercase tracking-wider">Expert Team</span>
                     </div>
                 </div>
-            `).join('');
-        } catch (error) {
-            container.innerHTML = "<p style='color:red;'>Failed to load reviews.</p>";
-        }
-    }
+            </div>
+        </div>
+    </section>
 
-    // 3. Submit Review to Google Sheet
-    document.getElementById('liveReviewForm').addEventListener('submit', async (e) => {
-        e.preventDefault();
-        if (selectedRating === 0) { alert("Please select a star rating first!"); return; }
+    <section id="testimonials" class="py-24 bg-cream px-6 lg:px-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <p class="text-rose text-xs font-bold tracking-[0.3em] uppercase mb-4">Client Love</p>
+                <h2 class="font-serif text-4xl lg:text-6xl">What Our <span class="italic text-rose">Clients</span> Say</h2>
+            </div>
 
-        const btn = document.getElementById('submitReviewBtn');
-        btn.innerHTML = "<span>Sending...</span>";
-        btn.disabled = true;
+            <div id="reviews-container" class="grid md:grid-cols-3 gap-8 mb-20">
+                <div class="col-span-full text-center text-gold italic py-10">Loading guest experiences...</div>
+            </div>
 
-        const payload = {
-            data: [{
-                name: document.getElementById('revName').value,
-                rating: selectedRating,
-                comment: document.getElementById('revComment').value,
-                date: new Date().toLocaleDateString()
-            }]
-        };
+            <div class="max-w-xl mx-auto bg-warmWhite p-10 shadow-2xl reveal">
+                <h3 class="font-serif text-3xl text-center mb-8 text-espresso">Share Your Experience</h3>
+                
+                <div id="starInputGroup" class="flex justify-center gap-3 mb-8 text-2xl text-gray-300">
+                    <i class="fas fa-star cursor-pointer transition-colors" data-rating="1"></i>
+                    <i class="fas fa-star cursor-pointer transition-colors" data-rating="2"></i>
+                    <i class="fas fa-star cursor-pointer transition-colors" data-rating="3"></i>
+                    <i class="fas fa-star cursor-pointer transition-colors" data-rating="4"></i>
+                    <i class="fas fa-star cursor-pointer transition-colors" data-rating="5"></i>
+                </div>
 
-        try {
-            const response = await fetch(API_URL, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(payload)
-            });
+                <form id="liveReviewForm" class="space-y-6">
+                    <input type="text" id="revName" placeholder="Your Name" class="w-full bg-transparent border-b border-gold/30 py-3 outline-none focus:border-gold transition-colors" required>
+                    <textarea id="revComment" placeholder="How was your visit?" class="w-full h-32 bg-espresso/5 p-4 border border-gold/20 rounded-lg outline-none focus:border-gold transition-colors" required></textarea>
+                    <button type="submit" id="submitReviewBtn" class="w-full bg-espresso text-gold py-4 font-bold uppercase tracking-widest text-xs hover:bg-gold hover:text-espresso transition-all">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-            if (response.ok) {
-                alert("Thank you! Your review has been added to our records.");
-                document.getElementById('liveReviewForm').reset();
-                selectedRating = 0;
-                stars.forEach(s => s.classList.remove('active'));
-                fetchLiveReviews(); // Refresh the display
+    <footer id="contact" class="bg-espresso pt-20 pb-10 px-6 lg:px-20 text-warmWhite">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16 border-b border-warmWhite/10 pb-16">
+            <div>
+                <div class="font-serif text-3xl text-gold mb-6">✦ Salon Nilmee</div>
+                <p class="text-sm text-warmWhite/50 italic mb-8">Your beauty, our passion — since day one.</p>
+                <div class="space-y-4 text-sm text-warmWhite/70">
+                    <p>📍 NO:09, Sanasa Ideal, Gampaha</p>
+                    <p>📞 +94 77 45 70 509</p>
+                    <p>📧 salonnilmi@gmail.com</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-8">Opening Hours</h4>
+                <div class="space-y-3 text-sm text-warmWhite/60">
+                    <div class="flex justify-between border-b border-warmWhite/5 pb-2"><span>Mon - Fri</span><span class="text-gold">8AM - 8PM</span></div>
+                    <div class="flex justify-between border-b border-warmWhite/5 pb-2"><span>Sat</span><span class="text-gold">8AM - 9PM</span></div>
+                    <div class="flex justify-between"><span>Sun</span><span class="text-gold">9AM - 6PM</span></div>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-8">Follow Our Journey</h4>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 border border-warmWhite/20 rounded-full flex items-center justify-center hover:border-gold hover:text-gold transition-all"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 border border-warmWhite/20 rounded-full flex items-center justify-center hover:border-gold hover:text-gold transition-all"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/94774570509" class="w-10 h-10 border border-warmWhite/20 rounded-full flex items-center justify-center hover:border-gold hover:text-gold transition-all"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-[10px] text-warmWhite/30 uppercase tracking-widest mt-10">© 2026 Salon Nilmee · Gampaha · Designed for Excellence</p>
+    </footer>
+
+    <script>
+        const API_URL = "https://sheetdb.io/api/v1/o2mya7ffwxdp5";
+
+        // Loader
+        window.addEventListener('load', () => {
+            setTimeout(() => { document.getElementById('loader').classList.add('hidden'); }, 1000);
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-espresso/95', 'py-4', 'shadow-2xl');
+                nav.classList.remove('py-6');
+            } else {
+                nav.classList.remove('bg-espresso/95', 'py-4', 'shadow-2xl');
+                nav.classList.add('py-6');
             }
-        } catch (err) {
-            alert("Submission error. Please check your connection.");
-        } finally {
-            btn.innerHTML = "<span>Submit Review</span>";
-            btn.disabled = false;
+        });
+
+        // Reveal Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Review Logic
+        let selectedRating = 0;
+        const stars = document.querySelectorAll('#starInputGroup i');
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                selectedRating = star.getAttribute('data-rating');
+                stars.forEach(s => s.classList.toggle('star-active', s.getAttribute('data-rating') <= selectedRating));
+            });
+        });
+
+        async function fetchReviews() {
+            const container = document.getElementById('reviews-container');
+            try {
+                const response = await fetch(API_URL);
+                const data = await response.json();
+                if (!data.length) { container.innerHTML = "<p class='col-span-full text-center opacity-50'>No reviews yet.</p>"; return; }
+
+                container.innerHTML = data.reverse().slice(0, 3).map(rev => `
+                    <div class="bg-warmWhite p-8 border border-gold/10 shadow-lg reveal visible">
+                        <div class="text-gold mb-4 text-xs">${'★'.repeat(rev.rating)}</div>
+                        <p class="italic text-espresso/70 text-sm mb-6">"${rev.comment}"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-gold rounded-full flex items-center justify-center text-espresso text-[10px] font-bold">${rev.name.charAt(0)}</div>
+                            <span class="text-[10px] font-bold uppercase tracking-widest">${rev.name}</span>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (e) { container.innerHTML = "<p class='text-red-500'>Error loading reviews.</p>"; }
         }
-    });
 
-    // Run on startup
-    fetchLiveReviews();
+        document.getElementById('liveReviewForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (!selectedRating) { alert("Please select a star rating!"); return; }
+            const btn = document.getElementById('submitReviewBtn');
+            btn.innerText = "Submitting..."; btn.disabled = true;
 
-    // ── Navbar, Menu, Reveal (Existing) ──
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); });
-    const mobileMenu = document.getElementById('mobileMenu');
-    function toggleMenu() { mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex'; }
-    function closeMenu() { mobileMenu.style.display = 'none'; }
+            try {
+                await fetch(API_URL, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        data: [{
+                            name: document.getElementById('revName').value,
+                            rating: selectedRating,
+                            comment: document.getElementById('revComment').value,
+                            date: new Date().toLocaleDateString()
+                        }]
+                    })
+                });
+                alert("Thank you! Review posted.");
+                location.reload();
+            } catch (err) { alert("Error connecting to sheet."); }
+        });
 
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), i * 80);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    reveals.forEach(el => observer.observe(el));
-  </script>
+        fetchReviews();
+    </script>
 </body>
 </html>
