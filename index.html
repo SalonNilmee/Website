@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salon Nilmee | 15+ Years of Luxury Beauty</title>
+    <title>Salon Nilmee | 15+ Years of Mastery in Gampaha</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
@@ -12,70 +12,53 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        espresso: '#2e1a1a',
-                        gold: '#c9a96e',
-                        rose: '#c9896a',
-                        cream: '#fdf8f2',
-                        warmWhite: '#fefcf9',
-                    },
-                    fontFamily: {
-                        serif: ['Cormorant Garamond', 'serif'],
-                        sans: ['Jost', 'sans-serif'],
-                    }
+                    colors: { espresso: '#2e1a1a', gold: '#c9a96e', rose: '#c9896a', cream: '#fdf8f2', warmWhite: '#fefcf9' },
+                    fontFamily: { serif: ['Cormorant Garamond', 'serif'], sans: ['Jost', 'sans-serif'] }
                 }
             }
         }
     </script>
     <style>
-        /* Smooth Entrance Animations */
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.9s ease-out; }
         .reveal.visible { opacity: 1; transform: translateY(0); }
-        .glass-nav { background: rgba(46, 26, 26, 0.9); backdrop-filter: blur(10px); }
+        .glass-nav { background: rgba(46, 26, 26, 0.95); backdrop-filter: blur(10px); }
         .star-active { color: #c9a96e !important; }
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #2e1a1a; }
-        ::-webkit-scrollbar-thumb { background: #c9a96e; border-radius: 10px; }
+        .service-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .service-card:hover { border-color: #c9a96e; transform: translateY(-5px); background: rgba(255,255,255,0.03); }
     </style>
 </head>
 <body class="bg-cream font-sans text-espresso overflow-x-hidden">
 
     <div id="loader" class="fixed inset-0 z-[100] bg-espresso flex items-center justify-center transition-opacity duration-700">
-        <div class="font-serif text-3xl tracking-[0.4em] text-gold animate-pulse text-center">
-            SALON NILMEE<br><span class="text-xs tracking-[0.2em] font-sans text-white/50">EST. 2011</span>
+        <div class="text-center">
+            <div class="font-serif text-3xl tracking-[0.4em] text-gold animate-pulse">SALON NILMEE</div>
+            <div class="h-[1px] w-12 bg-gold/30 mx-auto mt-4"></div>
         </div>
     </div>
 
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 px-6 py-5 lg:px-20 glass-nav">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="#" class="font-serif text-2xl tracking-wider text-warmWhite">✦ Salon <span class="text-gold">Nilmee</span></a>
+            <a href="#" class="font-serif text-2xl tracking-wider text-warmWhite group">✦ Salon <span class="group-hover:text-gold transition-colors">Nilmee</span></a>
             <div class="hidden md:flex gap-10">
-                <a href="#about" class="text-[10px] font-bold uppercase tracking-widest text-warmWhite hover:text-gold transition-colors">About</a>
-                <a href="#services-section" class="text-[10px] font-bold uppercase tracking-widest text-warmWhite hover:text-gold transition-colors">Services</a>
-                <a href="#testimonials" class="text-[10px] font-bold uppercase tracking-widest text-warmWhite hover:text-gold transition-colors">Reviews</a>
-                <a href="#footer-contact" class="text-[10px] font-bold uppercase tracking-widest text-warmWhite hover:text-gold transition-colors">Contact</a>
+                <a href="#about" class="text-[10px] font-bold uppercase tracking-widest text-warmWhite/70 hover:text-gold transition-colors">The Studio</a>
+                <a href="#services-menu" class="text-[10px] font-bold uppercase tracking-widest text-warmWhite/70 hover:text-gold transition-colors">Services</a>
+                <a href="#testimonials" class="text-[10px] font-bold uppercase tracking-widest text-warmWhite/70 hover:text-gold transition-colors">Reviews</a>
+                <a href="#footer-contact" class="text-[10px] font-bold uppercase tracking-widest text-warmWhite/70 hover:text-gold transition-colors">Contact</a>
             </div>
-            <a href="https://wa.me/94774570509?text=Hello%20Salon%20Nilmee!%20I%20want%20to%20book%20an%20appointment." class="bg-gold text-espresso px-6 py-2.5 text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-all duration-300">Book Now</a>
+            <a href="https://wa.me/94774570509" class="bg-gold text-espresso px-6 py-2.5 text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-all">Book Appointment</a>
         </div>
     </nav>
 
     <section class="relative h-screen flex items-center bg-espresso px-6 lg:px-20 overflow-hidden">
         <div class="absolute inset-0 opacity-40">
-            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1920" class="w-full h-full object-cover" alt="Salon Interior">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1920" class="w-full h-full object-cover" alt="Luxury Salon">
         </div>
         <div class="relative z-10 max-w-4xl">
-            <p class="text-gold text-xs font-semibold tracking-[0.5em] uppercase mb-6">✦ 15+ Years of Artistry ✦</p>
-            <h1 class="font-serif text-6xl lg:text-9xl text-warmWhite leading-tight mb-8">
-                Beauty <br> <span class="italic font-light text-gold italic">Redefined.</span>
-            </h1>
-            <p class="text-warmWhite/80 text-lg max-w-md mb-10 font-light leading-relaxed">
-                Experience transformative care in the heart of Gampaha. Where professional grade results meet luxury relaxation.
-            </p>
+            <p class="text-gold text-xs font-semibold tracking-[0.5em] uppercase mb-6">✦ Celebrating 15+ Years ✦</p>
+            <h1 class="font-serif text-6xl lg:text-9xl text-warmWhite leading-tight mb-8">Elegance <br> <span class="italic font-light text-gold">Perfected.</span></h1>
             <div class="flex flex-wrap gap-5">
-                <a href="#services-section" class="bg-gold text-espresso px-10 py-4 font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform duration-300">Explore Our Menu</a>
-                <a href="https://wa.me/94774570509" class="border border-warmWhite/40 text-warmWhite px-10 py-4 font-bold uppercase tracking-widest text-xs hover:bg-warmWhite hover:text-espresso transition-all">WhatsApp Us</a>
+                <a href="#services-menu" class="bg-gold text-espresso px-10 py-4 font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform duration-300">View Menu</a>
+                <a href="tel:+94774570509" class="border border-warmWhite/40 text-warmWhite px-10 py-4 font-bold uppercase tracking-widest text-xs hover:bg-warmWhite hover:text-espresso transition-all">Call Studio</a>
             </div>
         </div>
     </section>
@@ -83,68 +66,117 @@
     <section id="about" class="py-32 bg-warmWhite px-6 lg:px-20">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
             <div class="relative reveal">
-                <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=800" class="w-full grayscale hover:grayscale-0 transition duration-1000 shadow-2xl rounded-sm" alt="Salon Service">
+                <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=800" class="w-full grayscale hover:grayscale-0 transition duration-1000 shadow-2xl rounded-sm">
                 <div class="absolute -bottom-10 -right-10 bg-espresso p-10 text-center border-t-4 border-gold shadow-2xl">
                     <div class="font-serif text-5xl text-gold">15+</div>
-                    <div class="text-[9px] font-bold uppercase tracking-[0.2em] text-warmWhite/60 mt-2">Years Excellence</div>
+                    <div class="text-[9px] font-bold uppercase tracking-[0.2em] text-warmWhite/60 mt-2">Years of Mastery</div>
                 </div>
             </div>
             <div class="reveal">
-                <p class="text-rose text-xs font-bold tracking-[0.4em] uppercase mb-4">Our Legacy</p>
-                <h2 class="font-serif text-5xl lg:text-6xl mb-8 text-espresso">Crafting Confidence Since <span class="italic text-rose">2011</span></h2>
+                <p class="text-rose text-xs font-bold tracking-[0.4em] uppercase mb-4">Our Professional Story</p>
+                <h2 class="font-serif text-5xl lg:text-6xl mb-8 text-espresso">Defining Beauty in <span class="italic text-rose">Gampaha</span></h2>
                 <div class="w-16 h-[1px] bg-gold mb-10"></div>
-                <p class="text-espresso/70 leading-relaxed mb-8 font-light text-lg">Salon Nilmee, led by **Mrs. Nilmini Thennakoon**, provides bespoke beauty solutions that combine traditional elegance with modern techniques.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="p-4 bg-cream border border-gold/10 text-[10px] font-bold uppercase tracking-widest flex items-center gap-3">
-                        <span class="text-gold text-xl">✦</span> Professional Grade Products
+                <p class="text-espresso/70 leading-relaxed mb-8 font-light text-lg">
+                    Founded in 2011, Salon Nilmee has spent over 15 years establishing itself as Gampaha’s premier destination for sophisticated grooming and transformative beauty care. Led by the vision of Mrs. Nilmini Thennakoon, our studio blends professional-grade artistry with a deeply personalized touch. We believe that true beauty lies in the details—from precision cuts to advanced skincare rituals. Our legacy is built on trust, excellence, and an unwavering commitment to helping every client reveal their most confident, radiant self.
+                </p>
+                <div class="flex gap-10 items-center">
+                    <div>
+                        <p class="text-xs font-bold uppercase tracking-widest text-gold mb-2">Philosophy</p>
+                        <p class="text-sm italic text-espresso/60">Quality without compromise.</p>
                     </div>
-                    <div class="p-4 bg-cream border border-gold/10 text-[10px] font-bold uppercase tracking-widest flex items-center gap-3">
-                        <span class="text-gold text-xl">✦</span> Certified Master Stylists
+                    <div class="w-[1px] h-12 bg-gold/20"></div>
+                    <div>
+                        <p class="text-xs font-bold uppercase tracking-widest text-gold mb-2">Mastery</p>
+                        <p class="text-sm italic text-espresso/60">Certified Expert Stylists.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services-section" class="py-32 bg-espresso text-warmWhite px-6 lg:px-20">
+    <section id="services-menu" class="py-32 bg-espresso text-warmWhite px-6 lg:px-20">
         <div class="text-center mb-24">
-            <p class="text-gold text-xs font-bold tracking-[0.5em] uppercase mb-4">The Selection</p>
-            <h2 class="font-serif text-5xl lg:text-6xl">Signature Menu</h2>
+            <p class="text-gold text-xs font-bold tracking-[0.5em] uppercase mb-4">The Collection</p>
+            <h2 class="font-serif text-5xl lg:text-6xl italic">Signature Services</h2>
             <div class="w-20 h-[1px] bg-gold mx-auto mt-8"></div>
         </div>
 
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white/5 border border-white/10 p-8 hover:border-gold/50 transition-all duration-500 reveal group">
-                <div class="overflow-hidden mb-6 h-48">
-                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Hair">
-                </div>
-                <h3 class="font-serif text-2xl text-gold mb-4">Hair Artistry</h3>
-                <ul class="text-xs space-y-3 font-light text-warmWhite/60 italic">
-                    <li>✦ Precision Cuts & Creative Styling</li>
-                    <li>✦ Advanced Color & Balayage</li>
-                    <li>✦ Keratin & Smoothing Rituals</li>
+            <div class="service-card border border-white/10 p-10 reveal">
+                <div class="text-gold font-serif text-4xl mb-6 opacity-30">01</div>
+                <h3 class="font-serif text-2xl text-gold mb-4">Hair Services</h3>
+                <p class="text-xs text-warmWhite/50 mb-6 italic leading-relaxed">From classic cuts to bold color transformations — our artists create looks that suit your lifestyle.</p>
+                <ul class="text-[11px] space-y-3 font-light uppercase tracking-widest text-warmWhite/80">
+                    <li>✦ Haircut & Styling</li>
+                    <li>✦ Coloring & Highlights</li>
+                    <li>✦ Straightening / Keratin</li>
+                    <li>✦ Perming & Blow Dry</li>
+                    <li>✦ Hair Extensions</li>
                 </ul>
             </div>
-            <div class="bg-white/5 border border-white/10 p-8 hover:border-gold/50 transition-all duration-500 reveal group">
-                <div class="overflow-hidden mb-6 h-48">
-                    <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Facial">
-                </div>
+
+            <div class="service-card border border-white/10 p-10 reveal">
+                <div class="text-gold font-serif text-4xl mb-6 opacity-30">02</div>
                 <h3 class="font-serif text-2xl text-gold mb-4">Skin & Facial</h3>
-                <ul class="text-xs space-y-3 font-light text-warmWhite/60 italic">
-                    <li>✦ Deep Hydration & Cleansing</li>
-                    <li>✦ Anti-Ageing & Glow Treatments</li>
-                    <li>✦ Herbal & Professional Facials</li>
+                <p class="text-xs text-warmWhite/50 mb-6 italic leading-relaxed">Restore radiance and achieve glowing skin with our curated facial and skin-care treatments.</p>
+                <ul class="text-[11px] space-y-3 font-light uppercase tracking-widest text-warmWhite/80">
+                    <li>✦ Deep Cleansing Facial</li>
+                    <li>✦ Anti-Ageing Treatment</li>
+                    <li>✦ Whitening & Brightening</li>
+                    <li>✦ Gold & Pearl Facial</li>
+                    <li>✦ Acne & Pigmentation Care</li>
                 </ul>
             </div>
-            <div class="bg-white/5 border border-white/10 p-8 hover:border-gold/50 transition-all duration-500 reveal group">
-                <div class="overflow-hidden mb-6 h-48">
-                    <img src="https://images.unsplash.com/photo-1594462285124-5f3c02e42ce7?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Bridal">
-                </div>
-                <h3 class="font-serif text-2xl text-gold mb-4">Bridal Luxury</h3>
-                <ul class="text-xs space-y-3 font-light text-warmWhite/60 italic">
-                    <li>✦ Full Wedding Day Packages</li>
-                    <li>✦ Traditional & Modern Draping</li>
-                    <li>✦ Pre-Wedding Skin Care</li>
+
+            <div class="service-card border border-white/10 p-10 reveal">
+                <div class="text-gold font-serif text-4xl mb-6 opacity-30">03</div>
+                <h3 class="font-serif text-2xl text-gold mb-4">Makeup Artistry</h3>
+                <p class="text-xs text-warmWhite/50 mb-6 italic leading-relaxed">Look flawless for every occasion. Our artists blend skill with creativity for stunning results.</p>
+                <ul class="text-[11px] space-y-3 font-light uppercase tracking-widest text-warmWhite/80">
+                    <li>✦ Bridal & Reception</li>
+                    <li>✦ Party & Event Makeup</li>
+                    <li>✦ Engagement Makeup</li>
+                    <li>✦ Airbrush Makeup</li>
+                    <li>✦ Eye Makeup & Lashes</li>
+                </ul>
+            </div>
+
+            <div class="service-card border border-white/10 p-10 reveal">
+                <div class="text-gold font-serif text-4xl mb-6 opacity-30">04</div>
+                <h3 class="font-serif text-2xl text-gold mb-4">Bridal Packages</h3>
+                <p class="text-xs text-warmWhite/50 mb-6 italic leading-relaxed">Your wedding day deserves perfection. All-inclusive packages for your precious moments.</p>
+                <ul class="text-[11px] space-y-3 font-light uppercase tracking-widest text-warmWhite/80">
+                    <li>✦ Complete Bridal Package</li>
+                    <li>✦ Pre-Bridal Skin Treatment</li>
+                    <li>✦ Bridal Hair Styling</li>
+                    <li>✦ Draping & Accessories</li>
+                    <li>✦ Groom Grooming Package</li>
+                </ul>
+            </div>
+
+            <div class="service-card border border-white/10 p-10 reveal">
+                <div class="text-gold font-serif text-4xl mb-6 opacity-30">05</div>
+                <h3 class="font-serif text-2xl text-gold mb-4">Nail Studio</h3>
+                <p class="text-xs text-warmWhite/50 mb-6 italic leading-relaxed">Express yourself through your nails. From classic polish to intricate art.</p>
+                <ul class="text-[11px] space-y-3 font-light uppercase tracking-widest text-warmWhite/80">
+                    <li>✦ Manicure & Pedicure</li>
+                    <li>✦ Gel Nails & Shellac</li>
+                    <li>✦ Acrylic & Extensions</li>
+                    <li>✦ Nail Art & Designs</li>
+                    <li>✦ Paraffin Wax Treatment</li>
+                </ul>
+            </div>
+
+            <div class="service-card border border-white/10 p-10 reveal">
+                <div class="text-gold font-serif text-4xl mb-6 opacity-30">06</div>
+                <h3 class="font-serif text-2xl text-gold mb-4">Wellness</h3>
+                <p class="text-xs text-warmWhite/50 mb-6 italic leading-relaxed">Escape the everyday and surrender to relaxation with our signature rituals.</p>
+                <ul class="text-[11px] space-y-3 font-light uppercase tracking-widest text-warmWhite/80">
+                    <li>✦ Head Massage</li>
+                    <li>✦ Scalp Care Rituals</li>
+                    <li>✦ Foot Reflexology</li>
+                    <li>✦ Steam & Detox Treatment</li>
+                    <li>✦ Full Body Spa</li>
                 </ul>
             </div>
         </div>
@@ -153,16 +185,14 @@
     <section id="testimonials" class="py-32 bg-cream px-6 lg:px-20">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <p class="text-rose text-xs font-bold tracking-[0.4em] uppercase mb-4">Client Stories</p>
-                <h2 class="font-serif text-5xl text-espresso">Verified Experiences</h2>
+                <p class="text-rose text-xs font-bold tracking-[0.4em] uppercase mb-4">The Experience</p>
+                <h2 class="font-serif text-5xl">Client Stories</h2>
             </div>
-            
-            <div id="reviews-container" class="grid md:grid-cols-3 gap-10 mb-20 min-h-[200px]">
-                <p class="col-span-full text-center text-gold italic">Synchronizing client reviews...</p>
-            </div>
+            <div id="reviews-container" class="grid md:grid-cols-3 gap-10 mb-20">
+                </div>
             
             <div class="max-w-xl mx-auto bg-warmWhite p-12 shadow-2xl border border-gold/10 reveal">
-                <h3 class="font-serif text-3xl text-center mb-10 text-espresso uppercase tracking-tighter">Post a Review</h3>
+                <h4 class="font-serif text-3xl text-center mb-10">Share Your Experience</h4>
                 <div id="starInputGroup" class="flex justify-center gap-4 text-2xl text-gray-300 mb-10">
                     <i class="fas fa-star cursor-pointer" data-rating="1"></i>
                     <i class="fas fa-star cursor-pointer" data-rating="2"></i>
@@ -171,9 +201,9 @@
                     <i class="fas fa-star cursor-pointer" data-rating="5"></i>
                 </div>
                 <form id="liveReviewForm" class="space-y-6">
-                    <input type="text" id="revName" placeholder="Full Name" class="w-full bg-transparent border-b border-gold/30 py-4 outline-none focus:border-gold transition-colors text-espresso" required>
-                    <textarea id="revComment" placeholder="Tell us about your service..." class="w-full h-32 bg-espresso/5 p-5 border border-gold/10 outline-none focus:border-gold rounded-sm text-espresso" required></textarea>
-                    <button type="submit" id="submitReviewBtn" class="w-full bg-espresso text-gold py-5 font-bold uppercase tracking-widest text-[10px] hover:bg-gold hover:text-espresso transition-all duration-500">Publish Review</button>
+                    <input type="text" id="revName" placeholder="Your Name" class="w-full bg-transparent border-b border-gold/30 py-4 outline-none focus:border-gold transition-colors" required>
+                    <textarea id="revComment" placeholder="Your Feedback" class="w-full h-32 bg-espresso/5 p-5 border border-gold/10 outline-none focus:border-gold rounded-sm" required></textarea>
+                    <button type="submit" id="submitReviewBtn" class="w-full bg-espresso text-gold py-5 font-bold uppercase tracking-widest text-[10px] hover:bg-gold hover:text-espresso transition-all duration-500">Submit Review</button>
                 </form>
             </div>
         </div>
@@ -185,22 +215,22 @@
                 <div class="font-serif text-3xl text-gold mb-8 italic">✦ Salon Nilmee</div>
                 <p class="text-sm font-light text-warmWhite/40 leading-relaxed mb-8">Elevating beauty in Gampaha for over 15 years. Professional artistry for the modern individual.</p>
                 <div class="flex gap-6 text-xl">
-                    <a href="#" class="text-warmWhite/30 hover:text-gold transition-colors"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-warmWhite/30 hover:text-gold transition-colors"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/94774570509" class="text-warmWhite/30 hover:text-gold transition-colors"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="text-warmWhite/30 hover:text-gold"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-warmWhite/30 hover:text-gold"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/94774570509" class="text-warmWhite/30 hover:text-gold"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div>
                 <h4 class="text-gold text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Studio Hours</h4>
-                <div class="space-y-4 text-xs font-light tracking-widest">
-                    <div class="flex justify-between border-b border-white/5 pb-3"><span>Mon — Sun</span> <span class="text-gold">08:00 AM – 07:00 PM</span></div>
+                <div class="space-y-4 text-xs font-light tracking-widest uppercase">
+                    <div class="flex justify-between border-b border-white/5 pb-3"><span>Mon — Sun</span> <span class="text-gold font-bold">08:00 AM – 07:00 PM</span></div>
                     <p class="text-warmWhite/20 text-[9px] mt-2 italic">*Open 7 days a week for your beauty needs.</p>
                 </div>
             </div>
             <div>
                 <h4 class="text-gold text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Connect</h4>
                 <div class="space-y-6 text-sm font-light">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Salon+Nilmee+Gampaha" target="_blank" class="flex gap-4 group">
+                    <a href="https://maps.google.com/?q=Salon+Nilmee+Gampaha" target="_blank" class="flex gap-4 group">
                         <span class="text-gold group-hover:scale-125 transition-transform"><i class="fas fa-location-dot"></i></span>
                         <span class="text-warmWhite/60 hover:text-gold transition-colors">NO:09, Sanasa Ideal, <br> Gampaha, Sri Lanka</span>
                     </a>
@@ -209,7 +239,7 @@
                         <span class="text-warmWhite/60 hover:text-gold transition-colors">+94 77 45 70 509</span>
                     </a>
                     <a href="https://wa.me/94774570509" class="inline-flex items-center bg-green-600/20 text-green-400 border border-green-500/30 px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-green-600 hover:text-white transition-all">
-                        <i class="fab fa-whatsapp mr-2 text-lg"></i> Direct Message
+                        <i class="fab fa-whatsapp mr-2 text-lg"></i> Send WhatsApp
                     </a>
                 </div>
             </div>
@@ -220,36 +250,24 @@
     <script>
         const API_URL = "https://sheetdb.io/api/v1/o2mya7ffwxdp5";
 
-        // Loader removal
+        // Loader
         window.addEventListener('load', () => {
             const loader = document.getElementById('loader');
             loader.style.opacity = '0';
             setTimeout(() => loader.style.display = 'none', 700);
         });
 
-        // Navbar interaction
+        // Scroll Effects
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                nav.classList.add('py-4', 'shadow-2xl');
-                nav.classList.remove('py-5');
-            } else {
-                nav.classList.remove('py-4', 'shadow-2xl');
-                nav.classList.add('py-5');
-            }
+            if (window.scrollY > 50) { nav.classList.add('py-4', 'shadow-2xl'); nav.classList.remove('py-5'); }
+            else { nav.classList.remove('py-4', 'shadow-2xl'); nav.classList.add('py-5'); }
         });
 
-        // Reveal animations
-        ScrollReveal().reveal('.reveal', { 
-            distance: '40px', 
-            duration: 1000, 
-            easing: 'ease-out', 
-            interval: 150, 
-            origin: 'bottom',
-            viewFactor: 0.1
-        });
+        // Animations
+        ScrollReveal().reveal('.reveal', { distance: '40px', duration: 1000, easing: 'ease-out', interval: 150, origin: 'bottom', viewFactor: 0.1 });
 
-        // Review Star Rating logic
+        // Stars
         let selectedRating = 0;
         const stars = document.querySelectorAll('#starInputGroup i');
         stars.forEach(s => {
@@ -263,21 +281,18 @@
             });
         });
 
-        // Load Reviews from SheetDB
+        // Fetch Reviews
         async function fetchReviews() {
             const container = document.getElementById('reviews-container');
             try {
                 const response = await fetch(API_URL);
                 const data = await response.json();
-                
                 if(!data || data.length === 0) {
-                    container.innerHTML = "<p class='col-span-full text-center text-warmWhite/30 py-10'>No reviews found. Be the first to share your journey!</p>";
+                    container.innerHTML = "<p class='col-span-full text-center text-espresso/40 italic'>Our guest journey begins here...</p>";
                     return;
                 }
-
-                // Reverse to show newest reviews first
                 container.innerHTML = data.reverse().slice(0, 3).map(rev => `
-                    <div class="bg-white p-10 shadow-sm border border-gold/5 flex flex-col justify-between hover:-translate-y-2 transition-all duration-500">
+                    <div class="bg-white p-10 shadow-sm border border-gold/5 flex flex-col justify-between">
                         <div>
                             <div class="text-gold mb-6 text-[10px] tracking-widest">${'★'.repeat(rev.rating)}</div>
                             <p class="text-espresso/70 italic text-sm leading-relaxed mb-8">"${rev.comment}"</p>
@@ -285,47 +300,25 @@
                         <div class="font-bold text-[9px] uppercase tracking-[0.3em] text-rose mt-auto pt-6 border-t border-cream">— ${rev.name}</div>
                     </div>
                 `).join('');
-                
-            } catch (error) {
-                container.innerHTML = "<p class='col-span-full text-center text-red-400'>Network error. Please try again later.</p>";
-            }
+            } catch (error) { container.innerHTML = "<p class='col-span-full text-center text-red-400'>Sync error.</p>"; }
         }
 
-        // Post Review
+        // Submit
         document.getElementById('liveReviewForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            if(!selectedRating) return alert("Please select a star rating first!");
-            
+            if(!selectedRating) return alert("Please select a star rating!");
             const btn = document.getElementById('submitReviewBtn');
-            btn.innerText = "POSTING...";
-            btn.disabled = true;
+            btn.innerText = "POSTING..."; btn.disabled = true;
 
             try {
                 const response = await fetch(API_URL, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                        data: [{
-                            name: document.getElementById('revName').value,
-                            rating: selectedRating,
-                            comment: document.getElementById('revComment').value,
-                            date: new Date().toLocaleDateString()
-                        }]
-                    })
+                    method: "POST", headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ data: [{ name: document.getElementById('revName').value, rating: selectedRating, comment: document.getElementById('revComment').value, date: new Date().toLocaleDateString() }] })
                 });
-
-                if(response.ok) {
-                    alert("Thank you! Your review is now live.");
-                    location.reload();
-                }
-            } catch (err) {
-                alert("Could not post review. Please check your internet connection.");
-                btn.innerText = "PUBLISH REVIEW";
-                btn.disabled = false;
-            }
+                if(response.ok) { alert("Thank you! Review published."); location.reload(); }
+            } catch (err) { alert("Network error."); btn.innerText = "SUBMIT REVIEW"; btn.disabled = false; }
         });
 
-        // Initialize
         fetchReviews();
     </script>
 </body>
