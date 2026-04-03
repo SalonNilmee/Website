@@ -11,16 +11,13 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap');
         :root { --rose-gold: #D4A373; --soft-cream: #FAFAF5; --deep-black: #121212; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--soft-cream); margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--soft-cream); margin: 0; }
         h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
         .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(212, 163, 115, 0.2); }
-        .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=1920');
-            background-size: cover; background-position: center; height: 90vh;
-        }
-        .service-card { transition: all 0.4s ease; background: white; border: 1px solid #eee; }
+        .hero-section { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=1920'); background-size: cover; background-position: center; height: 90vh; }
+        .service-card { transition: all 0.4s ease; background: white; border: 1px solid #eee; border-radius: 1.5rem; overflow: hidden; }
         .service-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(212, 163, 115, 0.15); border-color: var(--rose-gold); }
-        .btn-gold { background-color: var(--rose-gold); color: white; transition: 0.3s; }
+        .btn-gold { background-color: var(--rose-gold); color: white; transition: 0.3s; cursor: pointer; }
         .btn-gold:hover { background-color: var(--deep-black); transform: scale(1.05); }
         .star-rating i { cursor: pointer; transition: color 0.2s; color: #d1d5db; }
         .star-rating i.active { color: #f59e0b; }
@@ -47,49 +44,30 @@
     <section class="hero-section flex items-center justify-center text-center text-white px-6">
         <div class="animate__animated animate__fadeInUp">
             <h2 class="text-xs uppercase tracking-[0.5em] mb-4 text-[#D4A373]">Est. 2011 • Gampaha</h2>
-            <h1 class="text-5xl md:text-8xl mb-6 font-serif">Expert Beauty <br> <span class="italic">Redefined.</span></h1>
+            <h1 class="text-5xl md:text-8xl mb-6 font-serif uppercase tracking-tight">Expert Beauty <br> <span class="italic font-light">Redefined.</span></h1>
             <p class="text-lg max-w-2xl mx-auto mb-10 font-light opacity-90">15+ years of professional artistry with Mrs. Nilmini Thennakoon.</p>
-            <a href="#services" class="bg-white text-black px-10 py-4 rounded-full font-bold hover:bg-[#D4A373] hover:text-white transition shadow-2xl">Explore Our Menu</a>
+            <a href="#services" class="bg-white text-black px-10 py-4 rounded-full font-bold hover:bg-[#D4A373] hover:text-white transition shadow-2xl">Explore Menu</a>
         </div>
-    </section>
-
-    <section id="about" class="py-24 max-w-4xl mx-auto px-6 text-center reveal">
-        <span class="text-[#D4A373] text-4xl mb-6 block">✨</span>
-        <h3 class="text-4xl mb-6 font-serif">A Legacy of Beauty</h3>
-        <p class="text-gray-600 text-lg leading-relaxed italic">"Your wedding day or a simple haircut deserves perfection. For over 15 years, I've dedicated my life to helping women feel confident and stunning."</p>
-        <p class="mt-4 font-bold uppercase tracking-widest text-sm">— Nilmini Thennakoon (Founder)</p>
     </section>
 
     <section id="services" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-6">
-            <h3 class="text-5xl mb-12 font-serif text-center md:text-left">Our Services</h3>
+            <h3 class="text-5xl mb-12 font-serif">Our Services</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="service-card p-8 rounded-3xl reveal">
+                <div class="service-card p-8 reveal">
                     <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=400" class="w-full h-48 object-cover rounded-2xl mb-6" alt="Hair">
-                    <h4 class="text-2xl mb-4 font-bold italic font-serif text-[#D4A373]">Hair Artistry</h4>
-                    <ul class="space-y-2 text-gray-500 text-sm italic">
-                        <li>• Classic Cuts & Bold Colors</li>
-                        <li>• Keratin & Smoothing</li>
-                        <li>• Extensions & Perming</li>
-                    </ul>
+                    <h4 class="text-2xl mb-4 font-bold font-serif text-[#D4A373]">Hair Artistry</h4>
+                    <p class="text-gray-500 text-sm italic">Cuts, Coloring, Keratin & Styling tailored to your lifestyle.</p>
                 </div>
-                <div class="service-card p-8 rounded-3xl reveal">
+                <div class="service-card p-8 reveal">
                     <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=400" class="w-full h-48 object-cover rounded-2xl mb-6" alt="Makeup">
-                    <h4 class="text-2xl mb-4 font-bold italic font-serif text-[#D4A373]">Makeup Art</h4>
-                    <ul class="space-y-2 text-gray-500 text-sm italic">
-                        <li>• Bridal & Reception Focus</li>
-                        <li>• Airbrush Perfection</li>
-                        <li>• Event & Party Glam</li>
-                    </ul>
+                    <h4 class="text-2xl mb-4 font-bold font-serif text-[#D4A373]">Makeup Art</h4>
+                    <p class="text-gray-500 text-sm italic">Bridal & Event makeup with a professional, flawless finish.</p>
                 </div>
-                <div class="service-card p-8 rounded-3xl reveal">
-                    <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&q=80&w=400" class="w-full h-48 object-cover rounded-2xl mb-6" alt="Head Massage">
-                    <h4 class="text-2xl mb-4 font-bold italic font-serif text-[#D4A373]">Wellness</h4>
-                    <ul class="space-y-2 text-gray-500 text-sm italic">
-                        <li>• Deep Cleansing Facials</li>
-                        <li>• Head Massage & Scalp Care</li>
-                        <li>• Foot Reflexology</li>
-                    </ul>
+                <div class="service-card p-8 reveal">
+                    <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&q=80&w=400" class="w-full h-48 object-cover rounded-2xl mb-6" alt="Wellness">
+                    <h4 class="text-2xl mb-4 font-bold font-serif text-[#D4A373]">Wellness</h4>
+                    <p class="text-gray-500 text-sm italic">Relaxing head massages, facials & holistic care.</p>
                 </div>
             </div>
         </div>
@@ -98,90 +76,134 @@
     <section class="py-24 bg-[#121212] text-white">
         <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20">
             <div>
-                <h3 class="text-5xl mb-8 font-serif">Secure Your <br><span class="text-[#D4A373] italic">Spot Today</span></h3>
-                <div class="space-y-6 text-gray-300">
-                    <p><i class="fas fa-location-dot text-[#D4A373] mr-4"></i>09, Sanasa Ideal, Gampaha</p>
-                    <p><i class="fab fa-whatsapp text-green-400 mr-4"></i>0774570509</p>
-                    <p><i class="fas fa-phone text-blue-400 mr-4"></i>0714848486</p>
+                <h3 class="text-5xl mb-8 font-serif uppercase tracking-tighter">Your Special <br><span class="text-[#D4A373] italic">Moment Awaits</span></h3>
+                <p class="text-gray-400 mb-8 leading-relaxed">09, Sanasa Ideal, Gampaha. <br> Contact: 0774570509 / 0714848486</p>
+                <div class="flex space-x-4 text-3xl">
+                    <i class="fab fa-whatsapp text-green-400"></i>
+                    <i class="fab fa-facebook text-blue-500"></i>
                 </div>
             </div>
             <form action="https://formspree.io/f/xzdkanll" method="POST" class="bg-white p-8 rounded-3xl text-black shadow-2xl">
                 <input type="hidden" name="_subject" value="New Appointment - Salon Nilmee">
-                <div class="mb-4">
-                    <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Full Name</label>
-                    <input type="text" name="name" class="w-full border-b-2 border-gray-100 py-2 focus:border-[#D4A373] outline-none" required>
-                </div>
-                <div class="mb-4">
-                    <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Phone</label>
-                    <input type="tel" name="phone" class="w-full border-b-2 border-gray-100 py-2 focus:border-[#D4A373] outline-none" required>
-                </div>
-                <div class="mb-6">
-                    <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Service</label>
-                    <select name="service" class="w-full border-b-2 border-gray-100 py-2 bg-white outline-none">
-                        <option>Hair Transformation</option><option>Bridal Package</option><option>Skin & Facial</option><option>Nail Art</option><option>Wellness Treatment</option>
-                    </select>
-                </div>
-                <button type="submit" class="w-full btn-gold py-4 rounded-xl font-bold shadow-lg">Confirm Appointment</button>
+                <input type="text" name="name" placeholder="Name" class="w-full border-b py-3 mb-4 outline-none focus:border-[#D4A373]" required>
+                <input type="tel" name="phone" placeholder="Phone Number" class="w-full border-b py-3 mb-4 outline-none focus:border-[#D4A373]" required>
+                <select name="service" class="w-full border-b py-3 mb-6 bg-white outline-none">
+                    <option>Hair Artistry</option><option>Makeup Art</option><option>Bridal Package</option><option>Wellness</option>
+                </select>
+                <button type="submit" class="w-full btn-gold py-4 rounded-xl font-bold uppercase tracking-widest">Confirm Booking</button>
             </form>
         </div>
     </section>
 
     <section id="reviews" class="py-20 bg-[#FAFAF5]">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h3 class="text-3xl mb-12 font-serif">Customer Reviews</h3>
-            <div class="star-rating flex justify-center space-x-2 text-3xl mb-8" id="starRating">
-                <i class="fas fa-star" data-rating="1"></i><i class="fas fa-star" data-rating="2"></i><i class="fas fa-star" data-rating="3"></i><i class="fas fa-star" data-rating="4"></i><i class="fas fa-star" data-rating="5"></i>
+        <div class="max-w-4xl mx-auto px-6">
+            <h3 class="text-4xl text-center mb-16 font-serif">Customer Feedback</h3>
+            
+            <div id="reviews-container" class="grid gap-6 mb-16">
+                <p class="text-center text-gray-400">Loading reviews...</p>
             </div>
-            <form action="https://formspree.io/f/xzdkanll" method="POST">
-                <input type="hidden" name="_subject" value="New Review - Salon Nilmee">
-                <input type="hidden" name="rating" id="ratingValue" value="0">
-                <textarea name="comment" class="w-full p-6 border-2 border-dashed border-gray-200 rounded-2xl outline-none focus:border-[#D4A373] mb-6" placeholder="How was your experience?" required></textarea>
-                <button type="submit" class="bg-black text-white px-10 py-3 rounded-full hover:bg-[#D4A373] transition font-bold">Post Comment</button>
-            </form>
+
+            <div class="bg-white p-10 rounded-3xl shadow-xl reveal">
+                <h4 class="text-center font-bold uppercase tracking-widest mb-6">Leave a Review</h4>
+                <div class="star-rating flex justify-center space-x-2 text-3xl mb-8" id="starRating">
+                    <i class="fas fa-star" data-rating="1"></i><i class="fas fa-star" data-rating="2"></i>
+                    <i class="fas fa-star" data-rating="3"></i><i class="fas fa-star" data-rating="4"></i>
+                    <i class="fas fa-star" data-rating="5"></i>
+                </div>
+                
+                <form id="reviewForm" class="space-y-4">
+                    <input type="text" id="revName" placeholder="Your Name" class="w-full border-b py-3 outline-none focus:border-[#D4A373]" required>
+                    <textarea id="revComment" class="w-full p-4 border rounded-xl outline-none focus:border-[#D4A373] h-32" placeholder="How was your service?" required></textarea>
+                    <button type="submit" id="submitBtn" class="w-full bg-black text-white py-4 rounded-full hover:bg-[#D4A373] transition font-bold uppercase tracking-widest">Post Review</button>
+                </form>
+            </div>
         </div>
     </section>
 
-    <footer class="py-12 bg-white border-t text-center">
-        <div class="flex justify-center space-x-8 text-2xl mb-6 text-gray-400">
-            <a href="https://www.facebook.com/SalonNilmee/" target="_blank" class="hover:text-[#D4A373]"><i class="fab fa-facebook"></i></a>
-            <a href="https://wa.me/94774570509" target="_blank" class="hover:text-[#D4A373]"><i class="fab fa-whatsapp"></i></a>
-        </div>
-        <p class="text-gray-400 text-sm">&copy; 2026 Salon Nilmee. Experience is the difference.</p>
+    <footer class="py-12 bg-white text-center border-t">
+        <p class="text-gray-400 text-sm uppercase tracking-widest">&copy; 2026 Salon Nilmee • Gampaha</p>
     </footer>
 
-    <a href="https://wa.me/94774570509?text=Hi%20Salon%20Nilmee!" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl z-[100] hover:scale-110 transition-transform">
+    <a href="https://wa.me/94774570509" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl z-[100] hover:scale-110 transition-transform">
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
     <script>
-        // 1. Fixed Loader Logic with 1.5s Safety Timeout
-        const hideLoader = () => {
+        // Use your API URL
+        const API_URL = "https://sheetdb.io/api/v1/o2mya7ffwxdp5";
+
+        const hideLoader = () => { 
             const loader = document.getElementById('loader');
-            if(loader) {
-                loader.style.opacity = '0';
-                setTimeout(() => loader.style.display = 'none', 500);
-            }
+            if(loader) { loader.style.opacity = '0'; setTimeout(() => loader.style.display = 'none', 500); }
         };
         window.addEventListener('load', hideLoader);
-        setTimeout(hideLoader, 1500); // Forced show if load takes too long
+        setTimeout(hideLoader, 1500);
 
-        // 2. Scroll Animations
-        ScrollReveal().reveal('.reveal', { distance: '40px', duration: 1000, easing: 'ease-in-out', origin: 'bottom', interval: 200 });
+        ScrollReveal().reveal('.reveal', { distance: '40px', duration: 1000, origin: 'bottom', interval: 200 });
 
-        // 3. Star Rating Logic
+        let currentRating = 0;
         const stars = document.querySelectorAll('#starRating i');
-        const ratingInput = document.getElementById('ratingValue');
-        stars.forEach(star => {
-            star.addEventListener('click', function() {
-                const r = this.getAttribute('data-rating');
-                ratingInput.value = r;
-                stars.forEach(s => {
-                    s.classList.toggle('active', s.getAttribute('data-rating') <= r);
-                    s.classList.toggle('fas', s.getAttribute('data-rating') <= r);
-                    s.classList.toggle('far', s.getAttribute('data-rating') > r);
+        stars.forEach(s => {
+            s.addEventListener('click', () => {
+                currentRating = s.getAttribute('data-rating');
+                stars.forEach(star => {
+                    star.classList.toggle('active', star.getAttribute('data-rating') <= currentRating);
+                    star.classList.toggle('fas', star.getAttribute('data-rating') <= currentRating);
+                    star.classList.toggle('far', star.getAttribute('data-rating') > currentRating);
                 });
             });
         });
+
+        async function loadReviews() {
+            const container = document.getElementById('reviews-container');
+            try {
+                const res = await fetch(API_URL);
+                const data = await res.json();
+                if(!data || data.length === 0) { 
+                    container.innerHTML = "<p class='text-center text-gray-400 italic'>No reviews yet.</p>"; return; 
+                }
+                const displayData = data.reverse(); 
+                container.innerHTML = displayData.map(r => `
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="flex text-yellow-500 mb-2">${'<i class="fas fa-star"></i>'.repeat(parseInt(r.rating) || 5)}</div>
+                        <p class="text-gray-600 italic">"${r.comment}"</p>
+                        <div class="mt-4 font-bold text-xs uppercase tracking-widest text-[#D4A373]">— ${r.name}</div>
+                    </div>
+                `).join('');
+            } catch (e) { container.innerHTML = "<p class='text-center text-red-400'>Error loading reviews.</p>"; }
+        }
+
+        document.getElementById('reviewForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if(currentRating === 0) { alert("Please select a rating!"); return; }
+            const btn = document.getElementById('submitBtn');
+            btn.innerText = "Posting..."; btn.disabled = true;
+
+            const payload = {
+                data: [{
+                    name: document.getElementById('revName').value,
+                    rating: currentRating,
+                    comment: document.getElementById('revComment').value,
+                    date: new Date().toLocaleDateString()
+                }]
+            };
+
+            try {
+                const response = await fetch(API_URL, {
+                    method: "POST", headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload)
+                });
+                if(response.ok) {
+                    alert("Thank you! Review posted.");
+                    document.getElementById('reviewForm').reset();
+                    currentRating = 0; stars.forEach(s => s.classList.remove('active', 'fas'));
+                    loadReviews();
+                }
+            } catch (err) { alert("Error posting. Check Google Sheet permissions!"); }
+            finally { btn.innerText = "Post Review"; btn.disabled = false; }
+        });
+
+        loadReviews();
     </script>
 </body>
 </html>
