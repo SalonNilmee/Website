@@ -17,7 +17,7 @@
             --deep-black: #121212;
         }
 
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--soft-cream); }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--soft-cream); overflow-x: hidden; }
         h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
 
         .glass-nav {
@@ -53,9 +53,22 @@
             background-color: var(--deep-black);
             transform: scale(1.05);
         }
+        
+        /* Star Rating Styles */
+        .star-rating i {
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .star-rating i.active {
+            color: #f59e0b; /* yellow-500 */
+        }
     </style>
 </head>
 <body>
+
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex items-center justify-center transition-opacity duration-700">
+        <div class="text-2xl font-serif tracking-widest animate-pulse text-[#D4A373]">SALON NILMEE</div>
+    </div>
 
     <nav class="fixed w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -75,9 +88,9 @@
     </nav>
 
     <section class="hero-section flex items-center justify-center text-center text-white px-6">
-        <div class="animate__animated animate__fadeIn">
+        <div class="animate__animated animate__fadeInUp">
             <h2 class="text-xs uppercase tracking-[0.5em] mb-4 text-[#D4A373]">Est. 2011 • Gampaha</h2>
-            <h1 class="text-5xl md:text-8xl mb-6">Expert Beauty <br> <span class="italic">Redefined.</span></h1>
+            <h1 class="text-5xl md:text-8xl mb-6 font-serif">Expert Beauty <br> <span class="italic">Redefined.</span></h1>
             <p class="text-lg max-w-2xl mx-auto mb-10 font-light opacity-90">Experience 15+ years of professional artistry with Mrs. Nilmini Thennakoon.</p>
             <a href="#services" class="bg-white text-black px-10 py-4 rounded-full font-bold hover:bg-[#D4A373] hover:text-white transition shadow-2xl">Explore Our Menu</a>
         </div>
@@ -85,7 +98,7 @@
 
     <section id="about" class="py-24 max-w-4xl mx-auto px-6 text-center reveal">
         <span class="text-[#D4A373] text-4xl mb-6 block">✨</span>
-        <h3 class="text-4xl mb-6">A Legacy of Beauty</h3>
+        <h3 class="text-4xl mb-6 font-serif">A Legacy of Beauty</h3>
         <p class="text-gray-600 text-lg leading-relaxed italic">
             "Your wedding day or a simple haircut deserves perfection. For over 15 years, I've dedicated my life to helping women feel confident and stunning."
         </p>
@@ -96,7 +109,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16">
                 <div>
-                    <h3 class="text-5xl mb-2">Our Services</h3>
+                    <h3 class="text-5xl mb-2 font-serif">Our Services</h3>
                     <div class="h-1 w-20 bg-[#D4A373]"></div>
                 </div>
                 <p class="text-gray-400 mt-4 md:mt-0">Curated treatments for the modern woman.</p>
@@ -105,7 +118,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="service-card p-10 rounded-3xl reveal">
                     <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=400" class="w-full h-48 object-cover rounded-2xl mb-6" alt="Hair">
-                    <h4 class="text-2xl mb-4 font-bold italic">Hair Artistry</h4>
+                    <h4 class="text-2xl mb-4 font-bold italic font-serif">Hair Artistry</h4>
                     <ul class="space-y-2 text-gray-500 text-sm">
                         <li>• Classic Cuts & Bold Colors</li>
                         <li>• Keratin & Smoothing</li>
@@ -115,7 +128,7 @@
 
                 <div class="service-card p-10 rounded-3xl reveal">
                     <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=400" class="w-full h-48 object-cover rounded-2xl mb-6" alt="Makeup">
-                    <h4 class="text-2xl mb-4 font-bold italic">Makeup Art</h4>
+                    <h4 class="text-2xl mb-4 font-bold italic font-serif">Makeup Art</h4>
                     <ul class="space-y-2 text-gray-500 text-sm">
                         <li>• Bridal & Reception Focus</li>
                         <li>• Airbrush Perfection</li>
@@ -124,8 +137,8 @@
                 </div>
 
                 <div class="service-card p-10 rounded-3xl reveal">
-                    <img src="https://unsplash.com/photos/young-woman-having-relaxing-head-massage-at-the-spa-Gj1jBU_hr14">
-                    <h4 class="text-2xl mb-4 font-bold italic">Wellness</h4>
+                    <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&q=80&w=400" class="w-full h-48 object-cover rounded-2xl mb-6" alt="Head Massage">
+                    <h4 class="text-2xl mb-4 font-bold italic font-serif">Wellness</h4>
                     <ul class="space-y-2 text-gray-500 text-sm">
                         <li>• Deep Cleansing Facials</li>
                         <li>• Head Massage & Scalp Care</li>
@@ -139,7 +152,7 @@
     <section class="py-24 bg-[#121212] text-white">
         <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20">
             <div>
-                <h3 class="text-5xl mb-8">Secure Your <br><span class="text-[#D4A373] italic">Spot Today</span></h3>
+                <h3 class="text-5xl mb-8 font-serif">Secure Your <br><span class="text-[#D4A373] italic">Spot Today</span></h3>
                 <p class="text-gray-400 mb-10">Select your service and your preferred date. Our team will contact you for final confirmation.</p>
                 <div class="space-y-6">
                     <div class="flex items-center space-x-4">
@@ -154,6 +167,7 @@
             </div>
 
             <form action="https://formspree.io/f/xzdkanll" method="POST" class="bg-white p-10 rounded-3xl shadow-2xl text-black">
+                <input type="hidden" name="_subject" value="New Appointment Request - Salon Nilmee">
                 <div class="mb-4">
                     <label class="text-xs font-bold uppercase tracking-widest text-gray-400">Full Name</label>
                     <input type="text" name="name" class="w-full border-b-2 border-gray-100 py-3 focus:border-[#D4A373] outline-none transition" required>
@@ -165,10 +179,11 @@
                 <div class="mb-6">
                     <label class="text-xs font-bold uppercase tracking-widest text-gray-400">Desired Service</label>
                     <select name="service" class="w-full border-b-2 border-gray-100 py-3 focus:border-[#D4A373] outline-none transition bg-white">
-                        <option>Hair Transformation/Hair Cut</option>
+                        <option>Hair Transformation</option>
                         <option>Bridal Package</option>
                         <option>Skin & Facial</option>
                         <option>Nail Art</option>
+                        <option>Wellness Treatment</option>
                     </select>
                 </div>
                 <button type="submit" class="w-full btn-gold text-white font-bold py-4 rounded-xl shadow-lg">Confirm Appointment</button>
@@ -179,7 +194,7 @@
 
     <section id="reviews" class="py-20">
         <div class="max-w-4xl mx-auto px-6">
-            <h3 class="text-3xl text-center mb-16">What Our Clients Say</h3>
+            <h3 class="text-3xl text-center mb-16 font-serif">What Our Clients Say</h3>
             <div class="bg-white p-12 rounded-3xl shadow-sm border border-gray-100 relative mb-10">
                 <i class="fas fa-quote-left text-4xl text-[#D4A373]/20 absolute top-6 left-6"></i>
                 <p class="text-xl text-gray-600 italic mb-6">"Salon Nilmee is the only place I trust in Gampaha. Nilmini's attention to detail for my bridal makeup was absolutely incredible. Highly recommend!"</p>
@@ -189,13 +204,24 @@
                 </div>
             </div>
             
-            <div class="mt-20 text-center">
+            <div class="mt-20 text-center reveal">
                 <h4 class="text-sm font-bold uppercase tracking-widest mb-6">Help us grow - Rate us</h4>
-                <div class="flex justify-center space-x-2 text-2xl text-gray-300 hover:text-[#D4A373] transition mb-6">
-                    <i class="fas fa-star cursor-pointer"></i><i class="fas fa-star cursor-pointer"></i><i class="fas fa-star cursor-pointer"></i><i class="fas fa-star cursor-pointer"></i><i class="fas fa-star cursor-pointer"></i>
+                
+                <div class="star-rating flex justify-center space-x-2 text-2xl text-gray-300 mb-6" id="starRating">
+                    <i class="fas fa-star" data-rating="1"></i>
+                    <i class="fas fa-star" data-rating="2"></i>
+                    <i class="fas fa-star" data-rating="3"></i>
+                    <i class="fas fa-star" data-rating="4"></i>
+                    <i class="fas fa-star" data-rating="5"></i>
                 </div>
-                <textarea class="w-full p-6 border-2 border-dashed border-gray-200 rounded-2xl outline-none focus:border-[#D4A373]" placeholder="Share your experience..."></textarea>
-                <button class="mt-6 bg-black text-white px-10 py-3 rounded-full hover:bg-[#D4A373] transition">Post Comment</button>
+
+                <form action="https://formspree.io/f/xzdkanll" method="POST">
+                    <input type="hidden" name="_subject" value="New Customer Review - Salon Nilmee">
+                    <input type="hidden" name="rating" id="ratingValue" value="0">
+                    
+                    <textarea name="comment" class="w-full p-6 border-2 border-dashed border-gray-200 rounded-2xl outline-none focus:border-[#D4A373] mb-6" placeholder="Share your experience..." required></textarea>
+                    <button type="submit" class="bg-black text-white px-10 py-3 rounded-full hover:bg-[#D4A373] transition">Post Comment</button>
+                </form>
             </div>
         </div>
     </section>
@@ -206,25 +232,4 @@
                 <div class="text-2xl font-bold mb-4 uppercase">Salon <span class="text-[#D4A373]">Nilmee</span></div>
                 <p class="text-gray-400 text-sm">Making Gampaha beautiful, one client at a time.</p>
             </div>
-            <div class="flex justify-center space-x-8 text-2xl">
-                <a href="https://www.facebook.com/SalonNilmee/" class="hover:text-[#D4A373]"><i class="fab fa-facebook"></i></a>
-                <a href="https://wa.me/94774570509" class="hover:text-[#D4A373]"><i class="fab fa-whatsapp"></i></a>
-            </div>
-            <div class="text-sm text-gray-400 md:text-right">
-                &copy; 2026 Salon Nilmee. All Rights Reserved.
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Reveal Animations
-        ScrollReveal().reveal('.reveal', {
-            distance: '50px',
-            duration: 1000,
-            easing: 'ease-in-out',
-            origin: 'bottom',
-            interval: 200
-        });
-    </script>
-</body>
-</html>
+            <div class="flex justify-center space
