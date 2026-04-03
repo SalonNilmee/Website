@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Nilmee | Luxury Hair & Beauty</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --rose-gold: #e5b3a3;
+            --deep-charcoal: #1a1a1a;
+        }
+        .bg-rose-gold { background-color: var(--rose-gold); }
+        .text-rose-gold { color: var(--rose-gold); }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(229, 179, 163, 0.3);
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-serif font-bold tracking-widest text-gray-900">SALON NILMEE</h1>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#services" class="hover:text-rose-gold transition">Services</a>
+                <a href="#about" class="hover:text-rose-gold transition">Our Story</a>
+                <a href="#reviews" class="hover:text-rose-gold transition">Reviews</a>
+            </div>
+            <a href="https://wa.me/94774570509" class="bg-rose-gold text-white px-6 py-2 rounded-full font-bold hover:bg-black transition animate__animated animate__pulse animate__infinite">BOOK NOW</a>
+        </div>
+    </nav>
+
+    <section class="h-screen hero-gradient flex items-center justify-center text-center text-white px-4">
+        <div class="animate__animated animate__fadeInUp">
+            <h2 class="text-5xl md:text-7xl font-serif mb-4">Timeless Elegance</h2>
+            <p class="text-lg md:text-xl mb-8 tracking-widest uppercase">15+ Years of Expert Artistry by Mrs. Nilmini Thennakoon</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#services" class="border-2 border-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 max-w-5xl mx-auto px-6 text-center">
+        <h3 class="text-3xl font-serif mb-6">Meet Our Founder</h3>
+        <p class="text-gray-600 leading-relaxed text-lg">
+            With over 15 years in the beauty industry, <strong>Mrs. Nilmini Thennakoon</strong> has built Salon Nilmee into Gampaha's premier destination for transformation. We believe in creating looks that suit your personality.
+        </p>
+    </section>
+
+    <section id="services" class="py-20 bg-white">
+        <div class="max-center px-6">
+            <h3 class="text-center text-4xl font-serif mb-16">Signature Services</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                
+                <div class="glass-card p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition duration-300">
+                    <div class="text-rose-gold text-4xl mb-4"><i class="fas fa-cut"></i></div>
+                    <h4 class="text-xl font-bold mb-3">Hair Services</h4>
+                    <ul class="text-gray-500 space-y-2">
+                        <li>Classic Cuts & Styling</li>
+                        <li>Coloring & Highlights</li>
+                        <li>Keratin & Straightening</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition duration-300">
+                    <div class="text-rose-gold text-4xl mb-4"><i class="fas fa-magic"></i></div>
+                    <h4 class="text-xl font-bold mb-3">Makeup Artistry</h4>
+                    <ul class="text-gray-500 space-y-2">
+                        <li>Bridal & Reception</li>
+                        <li>Airbrush Makeup</li>
+                        <li>Photography Ready</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition duration-300">
+                    <div class="text-rose-gold text-4xl mb-4"><i class="fas fa-hand-sparkles"></i></div>
+                    <h4 class="text-xl font-bold mb-3">Nail Studio</h4>
+                    <ul class="text-gray-500 space-y-2">
+                        <li>Gel & Shellac</li>
+                        <li>Acrylic Extensions</li>
+                        <li>Intricate Nail Art</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-4xl font-serif mb-6">Ready for your transformation?</h3>
+                    <p class="text-gray-400 mb-8">Fill out the form. A booking confirmation will be sent to our team immediately.</p>
+                    <div class="space-y-4">
+                        <p><i class="fab fa-whatsapp text-green-400 mr-2"></i> 0774570509</p>
+                        <p><i class="fas fa-map-marker-alt text-rose-gold mr-2"></i> 09, Sanasa Ideal, Gampaha</p>
+                    </div>
+                </div>
+                <form action="https://formspree.io/f/your-id-here" method="POST" class="space-y-4 text-black">
+                    <input type="text" name="name" placeholder="Your Name" class="w-full p-3 rounded-lg" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" class="w-full p-3 rounded-lg" required>
+                    <select name="service" class="w-full p-3 rounded-lg">
+                        <option>Hair Styling</option>
+                        <option>Bridal Package</option>
+                        <option>Facial/Skin</option>
+                    </select>
+                    <button type="submit" class="w-full bg-rose-gold text-white font-bold py-3 rounded-lg hover:bg-white hover:text-black transition">Confirm Appointment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-20">
+        <div class="max-w-4xl mx-auto px-6">
+            <h3 class="text-center text-3xl font-serif mb-12">Client Feedback</h3>
+            <div class="bg-white p-8 rounded-2xl shadow-md mb-8">
+                <div class="flex text-yellow-400 mb-4">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="italic text-gray-600">"The best bridal makeup experience I could have asked for. Nilmini is truly an artist!"</p>
+                <p class="mt-4 font-bold">- Sanduni Perera</p>
+            </div>
+            <div class="mt-10 border-t pt-10">
+                <h4 class="text-lg font-bold mb-4">Leave a Comment</h4>
+                <textarea class="w-full border p-4 rounded-lg mb-4" placeholder="How was your service?"></textarea>
+                <button class="bg-black text-white px-8 py-2 rounded-lg">Post Comment</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center border-t">
+        <div class="flex justify-center space-x-6 mb-6 text-xl">
+            <a href="https://www.facebook.com/SalonNilmee/" class="hover:text-rose-gold"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/94774570509" class="hover:text-rose-gold"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p class="text-gray-400">&copy; 2026 Salon Nilmee. Designed for Excellence.</p>
+    </footer>
+
+</body>
+</html>
